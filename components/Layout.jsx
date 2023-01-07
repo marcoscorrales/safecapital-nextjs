@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "../public/images/logo2.webp";
+import Logo from "../public/images/logo.png";
 
 const Layout = () => {
 
@@ -20,10 +20,13 @@ const Layout = () => {
     };
 
   return (
-    <div className="bg-gradient-to-r from-[#232D0E] to-[#464D41]">
+    <div className="bg-[#121416]">
       <header>
-        <nav>
-          <ul className="flex flex-row justify-around">
+        <nav className="bg-[#1F1F21]">
+          <ul className="flex flex-row justify-center items-center gap-4 text-lg">
+            <li>
+            <Link href="/"><Image className="my-0 mx-auto w-12" src={Logo}></Image></Link>
+            </li>
             <li>
               <Link href="/">Inicio</Link>
             </li>
@@ -41,15 +44,13 @@ const Layout = () => {
       </header>
 
       <main>
-        <h1 className="text-[#C1EF00] text-center text-4xl font-bold">
+        <h1 className="text-[#00FDA8] text-center text-4xl font-bold">
           Safe Capital
         </h1>
-        <h3 className="text-[#C1EF00] text-center text-3xl">
+        <h3 className="text-[#01A78A] text-center text-3xl">
           Maximiza tus ganancias y minimiza tus riesgos con nuestros servicios
           de gestión de fondos
         </h3>
-
-        <Image className="my-0 mx-auto w-96" src={Logo}></Image>
 
         <div className="my-0 mx-auto w-96 flex flex-col">
           {/* Formulario para ingresar los datos del usuario */}
