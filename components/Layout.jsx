@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "../public/images/logo.png";
+import portada from "../public/images/homePage.png"
 
 const Layout = () => {
 
@@ -21,9 +22,9 @@ const Layout = () => {
 
   return (
     <div className="bg-[#121416]">
-      <header>
-        <nav className="bg-[#1F1F21]">
-          <ul className="flex flex-row justify-center items-center gap-4 text-lg">
+      <header> 
+        <nav className="bg-transparent absolute mx-auto my-auto left-0 right-0">
+          <ul className="flex flex-row justify-center items-center gap-6 text-3xl">
             <li>
             <Link href="/"><Image className="my-0 mx-auto w-12" src={Logo}></Image></Link>
             </li>
@@ -41,6 +42,7 @@ const Layout = () => {
             </li>
           </ul>
         </nav>
+        <Image className="my-0 mx-auto w-full" src={portada}/>
       </header>
 
       <main>
