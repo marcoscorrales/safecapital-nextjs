@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
+import Dashboard from "../components/Dashboard";
 
 export default function Home() {
   return (
-    <Layout>Home page</Layout>
+    <Dashboard>Dashboard</Dashboard>
   )
 }

@@ -2,11 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 html,
 body {
   color: white;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: poppins, sans-serif;
+  font-size: 12px;
+  min-height: 100vh;
+  color: #1E1F21;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 16rem auto 30rem;
+  gap: 2rem;
+  width: 96%;
+  margin: 1rem auto 4rem;
 }
