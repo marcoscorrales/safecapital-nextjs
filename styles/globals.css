@@ -31,3 +31,7 @@ main{
   width: 96%;
   margin: 1rem auto 4rem;
 }
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}

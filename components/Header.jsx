@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import Profile from "../public/images/profile.jpg";
+import Profile from "../public/images/profile2.png";
 import Logo from "../public/images/logo.png";
 import {HiSearch} from 'react-icons/hi';
 import {MdLightMode, MdDarkMode, MdExpandMore, MdMenu} from 'react-icons/md';
@@ -24,7 +24,7 @@ const Header = () => {
                         <Image src={Profile} className='w-full' alt="profile"/>
                     </div>
                     <h5 className='text-xl font-medium'>Marcos</h5>
-                    <MdExpandMore className='w-[50%] h-full flex items-center justify-center text-[1.3rem]'/>
+                    <MdExpandMore className='h-full flex items-center justify-center text-[2.3rem]'/>
                 </div>
                 <button id='menu-btn' className='hidden'>
                     <MdMenu className="text-black"/>
