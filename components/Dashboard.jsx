@@ -10,8 +10,10 @@ const Dashboard = () => {
         <Header/>
         <main>
           <Sidebar/>
-          <Cards/>
-          <MontlyReport/>
+          <div>
+            <Cards/>
+            <MontlyReport/>
+          </div>
         </main>
         
     </div>

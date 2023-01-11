@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <nav className='w-full bg-white py-4 px-0'>
         <div className='flex justify-between items-center relative w-11/12 mx my-0 ml-auto'>
-            <Image className='w-28' src={Logo} alt="logo"/>
+            <Image className='w-20' src={Logo} alt="logo"/>
             <div className='bg-slate-300 py-2 px-6 w-[32vw] rounded-md flex items-center gap-4 text-[#1E1F21] absolute left-[15%]'>
                 <HiSearch size={25}/>
                 <input type='search' className='text-black bg-transparent w-full text-xl' placeholder='Buscar'/>
