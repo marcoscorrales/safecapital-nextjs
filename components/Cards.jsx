@@ -15,7 +15,7 @@ const Cards = () => (
         </div>
 
         <div className='mt-4 grid grid-cols-3 gap-6'>
-            <div className='flex flex-col justify-between text-white h-[16rem] p-[1.6rem] rounded-[1.6rem] bg-gradient-to-r from-purple-500 to-pink-500 shadow-md shadow-pink-500 hover:shadow-none'>
+            <div className='flex flex-col justify-between text-white h-[16rem] p-[1.6rem] rounded-[1.6rem] bg-gradient-to-r from-purple-500 to-pink-500 shadow-none hover:shadow-md hover:shadow-pink-500 ease-in duration-300'>
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <Image src={Btc} className='w-[2.3rem] h-[2.3rem] border-solid border-[1px] border-white rounded-md p-[0.4rem]' alt='/'/>
@@ -47,7 +47,7 @@ const Cards = () => (
                 </div>
             </div>
             {/* Tarjeta1 */}
-            <div className='flex flex-col justify-between text-white h-[16rem] p-[1.6rem] rounded-[1.6rem] bg-gradient-to-r from-violet-500 to-fuchsia-500 shadow-md shadow-fuchsia-500 hover:shadow-none'>
+            <div className='flex flex-col justify-between text-white h-[16rem] p-[1.6rem] rounded-[1.6rem] bg-gradient-to-r from-violet-500 to-fuchsia-500 shadow-none hover:shadow-md hover:shadow-fuchsia-500 ease-in duration-300'>
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <Image src={ETH} className='w-[2.3rem] h-[2.3rem] border-solid border-[1px] border-white rounded-md p-[0.4rem]' alt='/'/>
@@ -79,7 +79,7 @@ const Cards = () => (
                 </div>
             </div>
             {/* Tarjeta2 */}
-            <div className='flex flex-col justify-between text-white h-[16rem] p-[1.6rem] rounded-[1.6rem] bg-gradient-to-r from-cyan-500 to-blue-500 shadow-md shadow-blue-500 hover:shadow-none'>
+            <div className='flex flex-col justify-between text-white h-[16rem] p-[1.6rem] rounded-[1.6rem] bg-gradient-to-r from-cyan-500 to-blue-500 shadow-none hover:shadow-md hover:shadow-blue-500 ease-in duration-300'>
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <Image src={EUR} className='w-[2.3rem] h-[2.3rem] border-solid border-[1px] border-white rounded-md p-[0.4rem]' alt='/'/>
