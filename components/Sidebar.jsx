@@ -5,13 +5,13 @@ import {FaWallet} from 'react-icons/fa';
 import {AiFillCreditCard} from 'react-icons/ai';
 const Sidebar = () => {
   return (
-    <aside className='flex flex-col justify-between w-[16rem] h-[88vh]'>
+    <aside className='flex flex-col justify-between w-[16rem] h-[88vh] max-[1024px]:w-[24rem] max-[1024px]:h-[100vh]'>
         {/* Para mobiles y tablets */}
-        <button id='close-btn' className='hidden'>
+        <button id='close-btn' className='hidden cursor-pointer'>
             <MdClose size={25}/>
         </button>
 
-        <div className='flex flex-col gap-7 mt-10'> 
+        <div className='flex flex-col gap-7 mt-10 max-[1024px]:mt-16'> 
             {/* Boton activo */}
             <a className='flex items-center gap-[1.2rem] h-[4.2rem] relative bg-white text-[#00FDA8] border-solid border-l-8 border-[#00FDA8]' href='#'>
                 <MdDashboard className='text-[1.7rem] ml-12' size={25}/>

@@ -14,7 +14,7 @@ const Cards = () => (
             <input className='py-2 px-8 rounded-md bg-white text-black' type='date'/>
         </div>
 
-        <div className='mt-4 grid grid-cols-3 gap-6'>
+        <div className='mt-4 grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1'>
             <div className='flex flex-col justify-between text-white h-[16rem] p-[1.6rem] rounded-[1.6rem] bg-gradient-to-r from-purple-500 to-pink-500 shadow-none hover:shadow-md hover:shadow-pink-500 ease-in duration-300'>
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">

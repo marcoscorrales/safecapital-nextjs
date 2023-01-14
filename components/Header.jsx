@@ -9,25 +9,25 @@ const Header = () => {
   return (
     <nav className='w-full bg-white py-4 px-0'>
         <div className='flex justify-between items-center relative w-11/12 mx my-0 ml-auto'>
-            <Image className='w-20' src={Logo} alt="logo"/>
-            <div className='bg-slate-300 py-2 px-6 w-[32vw] rounded-md flex items-center gap-4 text-[#1E1F21] absolute left-[15%]'>
+            <Image className='w-20 cursor-pointer' src={Logo} alt="logo"/>
+            <div className='bg-slate-300 py-2 px-6 w-[32vw] rounded-md flex items-center gap-4 text-[#1E1F21] absolute left-[15%]  max-[1024px]:hidden'>
                 <HiSearch size={25}/>
                 <input type='search' className='text-black bg-transparent w-full text-xl' placeholder='Buscar'/>
             </div>
-            <div className='flex items-center justify-between gap-16'>
+            <div className='flex items-center justify-between gap-16 max-[600px]:gap-[2.6rem]'>
                 <div className='flex bg-slate-300 w-20 h-8 rounded-md cursor-pointer'>
                     <MdLightMode className='w-[50%] h-full flex items-center justify-center text-[1.3rem] bg-[#1E1F21] rounded-md text-white' />
                     <MdDarkMode className='w-[50%] h-full flex items-center justify-center text-[1.3rem]'/>
                 </div>
-                <div className='flex gap-4 items-center'>
+                <div className='flex gap-4 items-center max-[1024px]:gap-8'>
                     <div className='block w-12 h-12 rounded-[50%] overflow-hidden'>
                         <Image src={Profile} className='w-full' alt="profile"/>
                     </div>
                     <h5 className='text-xl font-medium'>Marcos</h5>
-                    <MdExpandMore className='h-full flex items-center justify-center text-[2.3rem]'/>
+                    <MdExpandMore className='h-full flex items-center justify-center text-[2.3rem] cursor-pointer max-[1024px]:hidden'/>
                 </div>
-                <button id='menu-btn' className='hidden'>
-                    <MdMenu className="text-black"/>
+                <button id='menu-btn' className='hidden max-[1024px]:inline  max-[1024px]:bg-transparent'>
+                    <MdMenu size={23}className="text-black"/>
                 </button>
             </div>
         </div>
