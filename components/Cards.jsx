@@ -10,7 +10,7 @@ import Master from "../public/images/dashboard_images/master card.png";
 const Cards = () => (
     <section>
         <div className='flex items-center gap-4'>
-            <h1>Vista General</h1>
+            <h1 className='text-white'>Vista General</h1>
             <input className='py-2 px-8 rounded-md bg-white text-black' type='date'/>
         </div>
 

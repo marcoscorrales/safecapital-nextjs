@@ -9,7 +9,7 @@ import Sidebar from './Sidebar.jsx'
 
 const Dashboard = () => {
   return (
-    <div className='bg-[#CBD5E1]'>
+    <div className='bg-[#121416]'>
         <Header/>
         <main>
           <Sidebar/>

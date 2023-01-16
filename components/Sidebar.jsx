@@ -13,7 +13,7 @@ const Sidebar = () => {
 
         <div className='flex flex-col gap-7 mt-10 max-[1024px]:mt-16'> 
             {/* Boton activo */}
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] relative bg-white text-[#00FDA8] border-solid border-l-8 border-[#00FDA8]' href='#'>
+            <a className='flex items-center gap-[1.2rem] h-[4.2rem] relative bg-[#242426] text-[#00FDA8] border-solid border-l-8 border-[#00FDA8]' href='#'>
                 <MdDashboard className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Dashboard</h4>
             </a>

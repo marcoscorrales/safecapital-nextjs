@@ -3,9 +3,9 @@ import {MdAdd} from 'react-icons/md';
 const FeaturedSectors = () => {
   return (
     <div className='mt-8 flex self-center gap-8 max-[600px]:flex-col max-[600px]:items-start max-[600px]:mt-12 max-[600px]:gap-4'>
-        <h2 className='text-2xl'>Sectores Destacados</h2>
+        <h2 className='text-2xl text-white'>Sectores Destacados</h2>
         <div className='flex gap-4 self-center flex-wrap max-w-full'>
-            <div className='py-[0.6rem] px-[1.6rem] bg-white rounded-md flex items-center gap-4 hover:shadow-lg shadow-gray-500/50 ease-in duration-300'>
+            <div className='py-[0.6rem] px-[1.6rem] bg-white rounded-md flex items-center gap-4 hover:shadow-lg shadow-gray-500/50 ease-in duration-300 hover:cursor-pointer'>
                 <MdAdd size={23} className='flex self-center justify-center h-fit'/>
             </div>
             <div className='py-[0.6rem] px-[1.6rem] bg-white rounded-md flex items-center gap-4 hover:shadow-lg shadow-gray-500/50 ease-in duration-300'>
