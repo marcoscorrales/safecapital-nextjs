@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {MdClose, MdDashboard, MdAnalytics, MdMessage, MdHelpCenter, MdSettings} from 'react-icons/md';
 import {RiExchangeDollarLine} from 'react-icons/ri';
 import {FaWallet} from 'react-icons/fa';
 import {AiFillCreditCard} from 'react-icons/ai';
+import { SideBarContext } from '../context/SideBarContext';
+
 const Sidebar = () => {
+    //Context para ocultar o mostrar el sidebar
+    const {sideBarState, toggleSideBar} = useContext(SideBarContext)
+    const handleClick = () => {
+        toggleSideBar();
+    }
   return (
-    <aside className='flex flex-col justify-between w-[16rem] h-[88vh] max-[1024px]:w-[24rem] max-[1024px]:h-[100vh]'>
+    <aside className={sideBarState ? `flex flex-col justify-between w-[16rem] h-[88vh] max-[1024px]:w-[24rem] max-[1024px]:h-[100vh]` : `hidden`}>
         {/* Para mobiles y tablets */}
-        <button id='close-btn' className='hidden cursor-pointer'>
-            <MdClose size={25}/>
+        <button id='close-btn' onClick={handleClick} className='hidden cursor-pointe'>
+            <MdClose className='text-white' size={25}/>
         </button>
 
         <div className='flex flex-col gap-7 mt-10 max-[1024px]:mt-16'> 

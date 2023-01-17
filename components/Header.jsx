@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from "next/image";
 import Profile from "../public/images/profile2.png";
 import Logo from "../public/images/logo.png";
 import {HiSearch} from 'react-icons/hi';
 import {MdEuro, MdDarkMode, MdExpandMore, MdMenu} from 'react-icons/md';
 import {BiDollar} from 'react-icons/bi';
+import { SideBarContext } from '../context/SideBarContext';
 
 const Header = () => {
+       //Context para ocultar o mostrar el sidebar
+       const {toggleSideBar} = useContext(SideBarContext)
+       const handleClick = () => {
+           toggleSideBar();
+       }
   return (
     <nav className='w-full bg-[#1F1F21] py-4 px-0'>
         <div className='flex justify-between items-center relative w-11/12 mx my-0 ml-auto'>
@@ -28,7 +34,7 @@ const Header = () => {
                     <MdExpandMore className='h-full flex items-center justify-center text-[2.3rem] cursor-pointer max-[1024px]:hidden text-white '/>
                 </div>
                 <button id='menu-btn' className='hidden max-[1024px]:inline  max-[1024px]:bg-transparent'>
-                    <MdMenu size={23}className="text-black"/>
+                    <MdMenu onClick={handleClick} size={23}className="text-white"/>
                 </button>
             </div>
         </div>
