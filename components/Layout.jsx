@@ -26,18 +26,18 @@ const Layout = () => {
         <nav className="bg-transparent absolute mx-auto my-auto left-0 right-0">
           <ul className="flex flex-row justify-center items-center gap-6 text-3xl">
             <li>
-            <Link href="/"><Image className="my-0 mx-auto w-12" src={Logo}></Image></Link>
+            <Link href="/"><Image className="my-0 mx-auto w-20 cursor-pointer" src={Logo}></Image></Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link href="/">Inicio</Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link href="/">Anuncios</Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link href="/">Productos</Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link href="/">Cartera</Link>
             </li>
           </ul>
