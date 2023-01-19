@@ -6,8 +6,10 @@ import {AiFillCreditCard} from 'react-icons/ai';
 import { SideBarContext } from '../context/SideBarContext';
 
 const Sidebar = () => {
-    //Context para ocultar o mostrar el sidebar
-    const {sideBarState, toggleSideBar} = useContext(SideBarContext)
+    //Context para ocultar o mostrar el sidebar y seleccionar apartado del sidebar
+    const {sideBarState, sideBarActive, setSideBarActive, toggleSideBar} = useContext(SideBarContext)
+    const classActive = 'flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8] active';
+    const classDisabled = 'flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]'
     const handleClick = () => {
         toggleSideBar();
     }
@@ -20,35 +22,35 @@ const Sidebar = () => {
 
         <div className='flex flex-col gap-7 mt-10 max-[1024px]:mt-16'> 
             {/* Boton activo */}
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] relative bg-[#242426] text-[#00FDA8] border-solid border-l-8 border-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'dashboard' ? classActive : classDisabled } onClick={()=>setSideBarActive('dashboard')} href='#'>
                 <MdDashboard className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Dashboard</h4>
             </a>
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'divisas' ? classActive : classDisabled } onClick={()=>setSideBarActive('divisas')} href='#'>
                 <RiExchangeDollarLine className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Divisas</h4>
             </a>
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'cartera' ? classActive : classDisabled } onClick={()=>setSideBarActive('cartera')} href='#'>
                 <FaWallet className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Cartera</h4>
             </a>
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'transacciones' ? classActive : classDisabled } onClick={()=>setSideBarActive('transacciones')} href='#'>
                 <AiFillCreditCard className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Transacciones</h4>
             </a>
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'analiticas' ? classActive : classDisabled } onClick={()=>setSideBarActive('analiticas')} href='#'>
                 <MdAnalytics className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Analíticas</h4>
             </a>
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'mensajes' ? classActive : classDisabled } onClick={()=>setSideBarActive('mensajes')} href='#'>
                 <MdMessage className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Mensajes</h4>
             </a>
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'ayuda' ? classActive : classDisabled } onClick={()=>setSideBarActive('ayuda')} href='#'>
                 <MdHelpCenter className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Ayuda</h4>
             </a>
-            <a className='flex items-center gap-[1.2rem] h-[4.2rem] text-gray-500 relative hover:text-[#00FDA8]' href='#'>
+            <a className={sideBarActive === 'opciones' ? classActive : classDisabled } onClick={()=>setSideBarActive('opciones')} href='#'>
                 <MdSettings className='text-[1.7rem] ml-12' size={25}/>
                 <h4>Opciones</h4>
             </a>

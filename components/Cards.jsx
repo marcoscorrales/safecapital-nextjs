@@ -26,7 +26,7 @@ const Cards = () => (
                 <div className="flex justify-between">
                     <h1 className='text-[2.2rem]'>456,12€</h1>
                     <div className="w-14">
-                        <Image src={Chip}/>
+                        <Image src={Chip} alt='/'/>
                     </div>
                 </div>
                 <div className="flex justify-between items-end">

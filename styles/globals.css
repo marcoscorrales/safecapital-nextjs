@@ -37,6 +37,12 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
+.active {
+  border-left: 8px solid #00FDA8;
+  background-color:#242426;
+  color: #00FDA8;
+}
+
 /* MEDIAS TABLETS*/
 
 @media screen and (max-width: 1024px) {
@@ -47,9 +53,16 @@ h1, h2, h3, h4, h5 {
   main aside{
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     z-index: 3;
     background-color: #121416;
+    animation: showSidebar 500ms ease forwards;
+  }
+
+  @keyframes showSidebar {
+    to {
+      left: 0;
+    }
   }
 
   main aside button#close-btn{
