@@ -3,7 +3,7 @@ import Image from "next/image";
 import Profile from "../public/images/profile2.png";
 import Logo from "../public/images/logo.png";
 import {HiSearch} from 'react-icons/hi';
-import {MdEuro, MdDarkMode, MdExpandMore, MdMenu} from 'react-icons/md';
+import {MdEuro, MdExpandMore, MdMenu} from 'react-icons/md';
 import {BiDollar} from 'react-icons/bi';
 import { SideBarContext } from '../context/SideBarContext';
 import Link from 'next/link';

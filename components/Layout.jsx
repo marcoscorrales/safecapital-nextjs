@@ -3,8 +3,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "../public/images/logo.png";
 import portada from "../public/images/homePageBlack.jpg"
+import {MdMenu, MdClose} from 'react-icons/md';
 
 const Layout = () => {
+
+  const [toggle, setToggle] = useState(false)
 
     // Define el estado para las variables necesarias para el cálculo del interés compuesto
     const [montoInicial, setMontoInicial] = useState(0);
@@ -23,26 +26,32 @@ const Layout = () => {
   return (
     <div className="bg-[#080C10]">
       <header> 
-        <nav className="bg-transparent absolute mx-auto my-auto left-0 right-0">
-          <ul className="flex flex-row justify-center items-center gap-6 text-3xl">
-            <li>
-            <Link href="/"><Image className="my-0 mx-auto w-20 cursor-pointer" src={Logo}></Image></Link>
-            </li>
-            <li className="text-white">
+        <nav className="w-full flex py-6 justify-between items-center">
+        <Link href="/"><Image className="my-0 ml-10 w-20 cursor-pointer" src={Logo} alt="/"></Image></Link>
+          <ul className="list-none sm:flex hidden justify-end items-center flex-1 text-[16px]">
+            <li className="text-white mr-10">
               <Link href="/">Inicio</Link>
             </li>
-            <li className="text-white">
+            <li className="text-white mr-10">
               <Link href="/">Anuncios</Link>
             </li>
-            <li className="text-white">
+            <li className="text-white mr-10">
               <Link href="/">Productos</Link>
             </li>
-            <li className="text-white">
+            <li className="text-white mr-10">
               <Link href="/">Cartera</Link>
             </li>
           </ul>
+
+          <div className="sm:hidden flex flex-1 justify-end items-center">
+            <button onClick={() => setToggle((prev) => !prev)}>
+            {toggle ? <MdClose size={23}className="text-white w-[28px] h-[28px]"/> : <MdMenu size={23}className="text-white w-[28px] h-[28px]"/>}
+            </button>
+            <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl`}>
+            </div>
+          </div>
         </nav>
-        <Image className="my-0 ml-auto " src={portada}/>
+        <Image className="my-0 ml-auto" alt="/" src={portada}/>
       </header>
 
       <main>
@@ -90,12 +99,12 @@ const Layout = () => {
             </button>
           </form>
           {/* Muestra el monto final */}
-          <p className="text-center font-bold text-lg">Monto final: {montoFinal}€</p>
+          <p className="text-center font-bold text-lg text-white">Monto final: {montoFinal}€</p>
         </div>
       </main>
       <footer>
         <div className="d-flex mt-20">
-          <p className="text-center">
+          <p className="text-center text-white text-3xl">
             © 2023 SafeCapital. All rights reserved.
           </p>
         </div>
