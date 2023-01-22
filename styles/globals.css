@@ -43,6 +43,16 @@ h1, h2, h3, h4, h5 {
   color: #00FDA8;
 }
 
+.green__gradient {
+  background: linear-gradient(90deg, rgba(0,253,160,1) 0%, rgba(0,0,0,1) 100%);
+  filter: blur(550px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
 /* MEDIAS TABLETS*/
 
 @media screen and (max-width: 1024px) {
