@@ -5,6 +5,8 @@ import Logo from "../public/images/logo.png";
 import portada from "../public/images/homePageBlack.jpg";
 import { MdMenu, MdClose } from "react-icons/md";
 import Hero from "./Hero";
+import Estadisticas from "./Estadisticas";
+import Negocio from "./Negocio";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
@@ -24,9 +26,9 @@ const Layout = () => {
   };
 
   return (
-    <div className="bg-[#080C10]">
+    <div className="bg-[#080C10] w-full">
       <header>
-        <nav className="w-full flex py-6 justify-between items-center">
+        <nav className="w-full flex py-6 justify-between items-center overflow-hidden">
           <Link href="/" className="flex items-center font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px]">
             <Image
               className="my-0 ml-10 w-20 cursor-pointer"
@@ -84,8 +86,15 @@ const Layout = () => {
         {/* <Image className="my-0 ml-auto" alt="/" src={portada}/> */}
       </header>
 
+      <div className='flex justify-center items-start'>
+      <div className='xl:max-w-[1280px] w-full'>
+        <Hero />
+      </div>
+    </div>
+
       <main className="flex flex-col">
-        <Hero/>
+        <Estadisticas/>
+        <Negocio/>
         <h1 className="text-[#00FDA8] text-center text-4xl font-bold">
           Safe Capital
         </h1>

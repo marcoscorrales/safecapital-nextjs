@@ -1,7 +1,7 @@
 import React from 'react'
 import {BsGraphUp} from "react-icons/bs";
 import Empezar from './Empezar';
-import img from '../public/images/investing_img.svg'
+import img from '../public/images/investing_img.png'
 import Image from 'next/image';
 const Hero = () => {
   return (
