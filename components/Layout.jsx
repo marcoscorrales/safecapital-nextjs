@@ -7,6 +7,8 @@ import { MdMenu, MdClose } from "react-icons/md";
 import Hero from "./Hero";
 import Estadisticas from "./Estadisticas";
 import Negocio from "./Negocio";
+import Facturacion from "./Facturacion";
+import Acciones from "./Acciones";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
@@ -92,9 +94,11 @@ const Layout = () => {
       </div>
     </div>
 
-      <main className="flex flex-col">
+      <main className="flex flex-col xl:max-w-[1280px]">
         <Estadisticas/>
         <Negocio/>
+        <Facturacion/>
+        <Acciones/>
         <h1 className="text-[#00FDA8] text-center text-4xl font-bold">
           Safe Capital
         </h1>
