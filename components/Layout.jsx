@@ -9,6 +9,7 @@ import Estadisticas from "./Estadisticas";
 import Negocio from "./Negocio";
 import Facturacion from "./Facturacion";
 import Acciones from "./Acciones";
+import FooterLayout from "./FooterLayout";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
@@ -155,11 +156,7 @@ const Layout = () => {
         </div>
       </main>
       <footer>
-        <div className="d-flex mt-20">
-          <p className="text-center text-white text-3xl">
-            © 2023 SafeCapital. All rights reserved.
-          </p>
-        </div>
+        <FooterLayout/>
       </footer>
     </div>
   );
