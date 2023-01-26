@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "../public/images/logo.png";
-import portada from "../public/images/homePageBlack.jpg";
 import { MdMenu, MdClose } from "react-icons/md";
 import Hero from "./Hero";
 import Estadisticas from "./Estadisticas";
@@ -86,7 +85,6 @@ const Layout = () => {
             </div>
           </div>
         </nav>
-        {/* <Image className="my-0 ml-auto" alt="/" src={portada}/> */}
       </header>
 
       <div className='flex justify-center items-start'>
