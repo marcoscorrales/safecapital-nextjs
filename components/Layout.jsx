@@ -9,6 +9,7 @@ import Negocio from "./Negocio";
 import Facturacion from "./Facturacion";
 import Acciones from "./Acciones";
 import FooterLayout from "./FooterLayout";
+import Calcular from "./Calcular";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
@@ -98,6 +99,7 @@ const Layout = () => {
         <Negocio/>
         <Facturacion/>
         <Acciones/>
+        <Calcular/>
         <h1 className="text-[#00FDA8] text-center text-4xl font-bold">
           Safe Capital
         </h1>
