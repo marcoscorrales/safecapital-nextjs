@@ -6,7 +6,7 @@ import { FiMail } from "react-icons/fi";
 import { AiFillFacebook, AiOutlineInstagram, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import Logo from "../public/images/logo.png";
 
-const FooterLayout = () => {
+const MainFooter = () => {
   return (
     <section className="flex justify-center items-center sm:py-16 py-6 px-6 flex-col">
       <div className="flex justify-center items-start md:flex-row flex-col mb-8 w-full">
@@ -95,4 +95,4 @@ const FooterLayout = () => {
   );
 };
 
-export default FooterLayout;
+export default MainFooter;

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Boton from './Boton'
 import TarjetaFondo from './TarjetaFondo'
@@ -17,7 +18,10 @@ const Calcular = () => {
         <TarjetaFondo nombre="Vanguard Emerging Markets Stock Index Fund" ytd="8,28 %" oneyear="-7,26 %" threeyear="0,57 %" fiveyear="1,06 %" textoBoton={"Calcular Rentabilidad"}/>
         <TarjetaFondo nombre="Nasdaq-100 Index Fund" ytd="7,40 %" oneyear="-19,90 %" threeyear="5,70 %" fiveyear="8,37 %" textoBoton={"Calcular Rentabilidad"}/>
       </div>
-      <Boton styles="mt-10" text="Ver más"/>
+      <Link href="/productos">
+        <Boton styles="mt-10" text="Ver más"/>
+      </Link>
+      
     </section>
   )
 }
