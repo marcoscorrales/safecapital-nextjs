@@ -56,7 +56,7 @@ const ChartLine = () => {
    
   return (
     <div >
-      <Line className='bg-white max-w-full mt-8 rounded-[1.6rem] p-[1.6rem]' options={options} data={data} />
+      <Line className='bg-gray-300 max-w-full mt-8 rounded-[1.6rem] p-[1.6rem]' options={options} data={data} />
     </div>
         
   )

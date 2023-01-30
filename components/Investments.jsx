@@ -18,15 +18,15 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Uniliver} alt="uniliver"/>
             <h4 className='text-white'>Uniliver</h4>
             <div>
-                <p className='text-gray-500'>7 Nov, 2022</p>
-                <p className='text-gray-500'>9:14pm</p>
+                <p className='text-gray-300'>7 Nov, 2022</p>
+                <p className='text-gray-300'>9:14pm</p>
             </div>
             <div>
-                <p className='text-gray-500'>1402</p>
-                <p className='text-gray-500'>Bonos</p>
+                <p className='text-gray-300'>1402</p>
+                <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-500'>$20,033</p>
+                <p className='text-gray-300'>$20,033</p>
                 <p className='text-red-500'>-4.27%</p>
             </div>
         </div>
@@ -35,15 +35,15 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Tesla} alt="tesla"/>
             <h4 className='text-white'>Tesla</h4>
             <div>
-                <p className='text-gray-500'>3 Dic, 2022</p>
-                <p className='text-gray-500'>12:01pm</p>
+                <p className='text-gray-300'>3 Dic, 2022</p>
+                <p className='text-gray-300'>12:01pm</p>
             </div>
             <div>
-                <p className='text-gray-500'>2003</p>
-                <p className='text-gray-500'>Bonos</p>
+                <p className='text-gray-300'>2003</p>
+                <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-500'>70,98€</p>
+                <p className='text-gray-300'>70,98€</p>
                 <p className='text-green-500'>+2.90%</p>
             </div>
         </div>
@@ -52,15 +52,15 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Monster} alt="monster"/>
             <h4 className='text-white'>Monster</h4>
             <div>
-                <p className='text-gray-500'>9 Dic, 2022</p>
-                <p className='text-gray-500'>8:52pm</p>
+                <p className='text-gray-300'>9 Dic, 2022</p>
+                <p className='text-gray-300'>8:52pm</p>
             </div>
             <div>
-                <p className='text-gray-500'>112</p>
-                <p className='text-gray-500'>Bonos</p>
+                <p className='text-gray-300'>112</p>
+                <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-500'>78,19€</p>
+                <p className='text-gray-300'>78,19€</p>
                 <p className='text-green-500'>+3.41%</p>
             </div>
         </div>
@@ -69,15 +69,15 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Mcdonalds} alt="mcdonalds"/>
             <h4 className='text-white'>Mcdonalds</h4>
             <div>
-                <p className='text-gray-500'>27 Dic, 2022</p>
-                <p className='text-gray-500'>11:11pm</p>
+                <p className='text-gray-300'>27 Dic, 2022</p>
+                <p className='text-gray-300'>11:11pm</p>
             </div>
             <div>
-                <p className='text-gray-500'>943</p>
-                <p className='text-gray-500'>Bonos</p>
+                <p className='text-gray-300'>943</p>
+                <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-500'>150,55€</p>
+                <p className='text-gray-300'>150,55€</p>
                 <p className='text-red-500'>-1.23%</p>
             </div>
         </div>

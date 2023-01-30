@@ -10,7 +10,7 @@ const Productos = () => {
         <MainHeader />
       </header>
       <main className="flex flex-col">
-      <h1 className="font-poppins font-semibold text-center xs:text-[48px] text-[38px] text-white xs:leading-[76.8px] leading-[66.8px] m-10 w-full">
+      <h1 className="font-poppins font-semibold text-center xs:text-[48px] text-[38px] text-white xs:leading-[76.8px] leading-[66.8px] my-10 w-full">
           Fondos indexados
         </h1>
         <div className="flex flex-wrap sm:justify-around justify-center w-full relative z-[1]">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Boton from "./Boton";
 import MainFooter from "./MainFooter";
 import MainHeader from "./MainHeader";
 
@@ -22,7 +23,7 @@ const CalcularRentabilidad = () => {
       <header>
         <MainHeader />
       </header>
-      <h1 className="font-poppins font-semibold text-center xs:text-[48px] text-[38px] text-white xs:leading-[76.8px] leading-[66.8px] m-10 w-full">
+      <h1 className="font-poppins font-semibold text-center xs:text-[48px] text-[38px] text-white xs:leading-[76.8px] leading-[66.8px] my-10 w-full">
       Simular rentabilidad
       </h1>
       <h3 className="text-[#01A78A] text-center text-3xl">
@@ -34,27 +35,27 @@ const CalcularRentabilidad = () => {
         {/* Formulario para ingresar los datos del usuario */}
         <form className="flex flex-col">
           {/* Input para el monto inicial */}
-          <label htmlFor="monto-inicial">Monto inicial:</label>
+          <label className="font-poppins font-normal text-white text-[18px] leading-[30.8px]" htmlFor="monto-inicial">Monto inicial:</label>
           <input
-            className="text-black"
+            className="font-poppins font-normal text-black text-[18px]"
             id="monto-inicial"
             type="number"
             value={montoInicial}
             onChange={(e) => setMontoInicial(e.target.value)}
           />
           {/* Input para la tasa de interés */}
-          <label htmlFor="tasa-interes">Tasa de interés:</label>
+          <label className="font-poppins font-normal text-white text-[18px] leading-[30.8px]" htmlFor="tasa-interes">Tasa de interés:</label>
           <input
-            className="text-black"
+            className="font-poppins font-normal text-black text-[18px]"
             id="tasa-interes"
             type="number"
             value={tasaInteres}
             onChange={(e) => setTasaInteres(e.target.value)}
           />
           {/* Input para el número de años */}
-          <label htmlFor="anios">Años:</label>
+          <label className="font-poppins font-normal text-white text-[18px] leading-[30.8px]" htmlFor="anios">Años:</label>
           <input
-            className="text-black"
+            className="font-poppins font-normal text-black text-[18px]"
             id="anios"
             type="number"
             value={anios}
@@ -63,7 +64,7 @@ const CalcularRentabilidad = () => {
           {/* Botón para calcular el interés compuesto */}
           <button
             type="button"
-            className="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 mt-2 w-full"
+            className="py-4 px-6 bg-gradient-to-r from-[#00FDA8] to-[#01A78A] font-poppins font-medium text-[18px] text-white outline-none mt-10 rounded-[10px]"
             onClick={() => {
               calcularInteresCompuesto();
             }}
@@ -72,7 +73,7 @@ const CalcularRentabilidad = () => {
           </button>
         </form>
         {/* Muestra el monto final */}
-        <p className="text-center font-bold text-lg text-white">
+        <p className="font-poppins font-normal text-center text-white text-[18px] leading-[30.8px]">
           Monto final: {montoFinal}€
         </p>
       </div>
