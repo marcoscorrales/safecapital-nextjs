@@ -11,16 +11,18 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+const ChartLine = ({text, labels, moneyData, lineColor, pointColor, bg}) => {
 
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+  
 const options = {
   responsive: true,
   plugins: {
@@ -29,21 +31,20 @@ const options = {
     },
     title: {
       display: true,
-      text: 'SP500 2022',
+      text: text,
     },
   },
 };
 
-const labels = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
 const data = {
   labels,
   datasets: [
     {
-      label: 'SP500',
-      data: ['4600', '4546', '4300', '4545', '4155', '4100', '3825', '4118', '3966', '3585', '3855', '4075'],
-      borderColor: 'red',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      label: text,
+      data: moneyData,
+      borderColor: lineColor,
+      backgroundColor: pointColor,
     },
   ],
   options:{
@@ -51,12 +52,10 @@ const data = {
     maintainAspectRadio : true
   }
 };
-
-const ChartLine = () => {
    
   return (
-    <div >
-      <Line className='bg-gray-300 max-w-full mt-8 rounded-[1.6rem] p-[1.6rem]' options={options} data={data} />
+    <div>
+      <Line className={`bg-${bg} max-w-full mt-8 rounded-[1.6rem] p-[1.6rem]`} options={options} data={data} />
     </div>
         
   )

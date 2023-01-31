@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import Hero from "./Hero";
 import Estadisticas from "./Estadisticas";
 import Negocio from "./Negocio";
