@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Boton from "./Boton";
+import ChartLine from "./ChartLine";
 import MainFooter from "./MainFooter";
 import MainHeader from "./MainHeader";
 
@@ -9,6 +10,8 @@ const CalcularRentabilidad = () => {
     const [tasaInteres, setTasaInteres] = useState(0);
     const [anios, setAnios] = useState(0);
     const [montoFinal, setMontoFinal] = useState(0);
+    const [labels, setLabels] = useState([]);
+    const [data, setData] = useState([]);
   
     // Función para calcular el interés compuesto
     const calcularInteresCompuesto = () => {
@@ -16,6 +19,15 @@ const CalcularRentabilidad = () => {
       const monto = montoInicial * Math.pow(1 + tasaInteres / 100, anios);
       // Actualiza el estado del monto final con el nuevo valor
       setMontoFinal(Math.round(monto));
+
+      let auxLabels = [];
+      let auxData = [];
+      for (let index = 1; index <= anios; index++) {
+         auxLabels.push(`año ${index}`)
+         auxData.push(Math.round(montoInicial * Math.pow(1 + tasaInteres / 100, index)))
+      }
+      setLabels(auxLabels);
+      setData(auxData);
     };
 
   return (
@@ -23,6 +35,8 @@ const CalcularRentabilidad = () => {
       <header>
         <MainHeader />
       </header>
+
+      <main className="flex flex-col xl:max-w-[1280px]">
       <h1 className="font-poppins font-semibold text-center xs:text-[48px] text-[38px] text-white xs:leading-[76.8px] leading-[66.8px] my-10 w-full">
       Simular rentabilidad
       </h1>
@@ -30,6 +44,11 @@ const CalcularRentabilidad = () => {
         Maximiza tus ganancias y minimiza tus riesgos con nuestros servicios de
         gestión de fondos
       </h3>
+
+      <p className="font-poppins font-normal text-gray-300 text-justify text-[18px] leading-[30.8px]">
+      El interés compuesto es un concepto que se aplica a la inversión en fondos indexados y otros tipos de inversiones financieras. Es un proceso en el que los intereses generados por la inversión se reinvesten en la misma inversión, lo que permite que la tasa de interés crezca a lo largo del tiempo.
+      El interés compuesto es una forma poderosa de construir riqueza a largo plazo, ya que permite que el dinero invirtido crezca de manera exponencial.
+      </p>
 
       <div className="xl:max-w-[1280px] flex flex-col items-center">
         {/* Formulario para ingresar los datos del usuario */}
@@ -83,6 +102,9 @@ const CalcularRentabilidad = () => {
           Monto final: {montoFinal}€
         </p>
       </div>
+
+      <ChartLine text={'Calculo interes compuesto'} labels={labels} moneyData={data} lineColor={'red'} pointColor={'rgba(255, 99, 132, 0.5)'} bg={'bg-gray-300'}/>
+      </main>
       <footer>
         <MainFooter />
       </footer>
