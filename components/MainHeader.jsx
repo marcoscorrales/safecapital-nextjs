@@ -23,7 +23,7 @@ const MainHeader = () => {
               <Link href="/">Inicio</Link>
             </li>
             <li className="text-white mr-10">
-              <Link href="/">Anuncios</Link>
+              <Link href="/blog">Blog</Link>
             </li>
             <li className="text-white mr-10">
               <Link href="/productos">Productos</Link>
