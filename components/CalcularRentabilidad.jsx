@@ -64,7 +64,7 @@ const CalcularRentabilidad = () => {
           el dinero invirtido crezca de manera exponencial.
         </p>
 
-        <div className="xl:max-w-[1280px] flex flex-col items-start bg-[#121416] p-8 rounded-2xl border-solid border-4 border-gray-500">
+        <div className="xl:max-w-[1280px] flex justify-around flex-row items-start bg-[#121416] p-8 rounded-2xl border-solid border-4 border-gray-500">
           {/* Formulario para ingresar los datos del usuario */}
           <form
             className="flex flex-col w-full sm:w-[50%]"
@@ -129,11 +129,23 @@ const CalcularRentabilidad = () => {
             >
               Calcular interés compuesto
             </button>
-          </form>
-          {/* Muestra el monto final */}
-          <p className="font-poppins font-normal text-center text-white text-[24px] w-full sm:w-[50%] mt-4">
+            {/* Muestra el monto final */}
+          <p className="font-poppins font-normal text-center text-white text-[24px] w-full mt-4">
             Monto final: {montoFinal}€
           </p>
+          </form>
+
+            <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] bg-[#121416] hover:bg-gradient-to-r from-[#01a78b37] to-[#00fda92d] w-full h-full border-solid border-4 border-gray-500'>
+            <p className='font-poppins font-normal text-[24px] text-center text-white my-10'>SP&500</p>
+            <div className="w-full pt-6 border-t-2 border-solid border-t-slate-300"/>
+            <div className='flex flex-row justify-around'>
+              <div className="flex flex-col">
+                <p className='font-poppins font-normal text-white text-[15px] xs:text-[18px] leading-[30.8px]'>Rentabilidad media histórica</p>
+                <p className='font-poppins font-bold text-white text-center text-[15px] xs:text-[18px] leading-[30.8px]'>8,26%</p>
+              </div>
+            </div>
+          </div>
+ 
         </div>
 
         <ChartLine

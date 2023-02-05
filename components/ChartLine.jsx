@@ -83,7 +83,6 @@ const data2 = {
         :
         <Line className={`${bg} max-w-full mt-8 rounded-[1.6rem] p-[1.6rem]`} options={options} data={data2} />
       }
-      
     </div>
         
   )
