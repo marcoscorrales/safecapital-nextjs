@@ -4,6 +4,17 @@ import ChartLine from "./ChartLine";
 import MainFooter from "./MainFooter";
 import MainHeader from "./MainHeader";
 
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 const CalcularRentabilidad = () => {
   // Define el estado para las variables necesarias para el cálculo del interés compuesto
   const [montoInicial, setMontoInicial] = useState(0);
@@ -134,8 +145,19 @@ const CalcularRentabilidad = () => {
             Monto final: {montoFinal}€
           </p>
           </form>
-
-            <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] bg-[#121416] hover:bg-gradient-to-r from-[#01a78b37] to-[#00fda92d] w-full h-full border-solid border-4 border-gray-500'>
+          <Swiper className="max-w-[400px]"
+      // install Swiper modules
+      modules={[Navigation, Pagination]}
+      spaceBetween={0}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide>
+      <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] bg-[#121416] hover:bg-gradient-to-r from-[#01a78b37] to-[#00fda92d] w-full h-full border-solid border-4 border-gray-500'>
             <p className='font-poppins font-normal text-[24px] text-center text-white my-10'>SP&500</p>
             <div className="w-full pt-6 border-t-2 border-solid border-t-slate-300"/>
             <div className='flex flex-row justify-around'>
@@ -145,6 +167,33 @@ const CalcularRentabilidad = () => {
               </div>
             </div>
           </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] bg-[#121416] hover:bg-gradient-to-r from-[#01a78b37] to-[#00fda92d] w-full h-full border-solid border-4 border-gray-500'>
+            <p className='font-poppins font-normal text-[24px] text-center text-white my-10'>NASDAQ</p>
+            <div className="w-full pt-6 border-t-2 border-solid border-t-slate-300"/>
+            <div className='flex flex-row justify-around'>
+              <div className="flex flex-col">
+                <p className='font-poppins font-normal text-white text-[15px] xs:text-[18px] leading-[30.8px]'>Rentabilidad media histórica</p>
+                <p className='font-poppins font-bold text-white text-center text-[15px] xs:text-[18px] leading-[30.8px]'>15,21</p>
+              </div>
+            </div>
+          </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] bg-[#121416] hover:bg-gradient-to-r from-[#01a78b37] to-[#00fda92d] w-full h-full border-solid border-4 border-gray-500'>
+            <p className='font-poppins font-normal text-[24px] text-center text-white my-10'>Emerging Markets</p>
+            <div className="w-full pt-6 border-t-2 border-solid border-t-slate-300"/>
+            <div className='flex flex-row justify-around'>
+              <div className="flex flex-col">
+                <p className='font-poppins font-normal text-white text-[15px] xs:text-[18px] leading-[30.8px]'>Rentabilidad media histórica</p>
+                <p className='font-poppins font-bold text-white text-center text-[15px] xs:text-[18px] leading-[30.8px]'>6.13%%</p>
+              </div>
+            </div>
+          </div>
+      </SwiperSlide>
+    
+    </Swiper>
  
         </div>
 
