@@ -53,6 +53,15 @@ h1, h2, h3, h4, h5 {
   filter: blur(750px);
 }
 
+/* SWIPER */
+
+.swiper-pagination-bullet-active, .swiper-pagination-bullet {
+  background-color: #00FDA8 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #00FDA8 !important;
+}
 /* MEDIAS TABLETS*/
 
 @media screen and (max-width: 1024px) {
