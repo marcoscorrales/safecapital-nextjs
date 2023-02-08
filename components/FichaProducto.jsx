@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react'
 import MainFooter from "./MainFooter";
 import MainHeader from "./MainHeader";
-import TarjetaFondo from "./TarjetaFondo";
+import { useRouter } from 'next/router'
 import {DataProductos} from "../data/data.js";
 
-const Productos = () => {
+const FichaProducto = ({productId}) => {
+    // const router = useRouter()
+    // const { id } = router.productId
   return (
     <div className="bg-[#080C10] w-full">
       <header>
@@ -12,20 +14,11 @@ const Productos = () => {
       </header>
       <main className="flex flex-col xl:max-w-[1280px]">
       <h1 className="font-poppins font-semibold text-center xs:text-[48px] text-[38px] text-white xs:leading-[76.8px] leading-[66.8px] my-10 w-full">
-          Fondos indexados
+      {productId}
         </h1>
         <div className="flex flex-wrap sm:justify-around justify-center w-full relative z-[1]">
          {DataProductos.map((producto) => (
-          <TarjetaFondo
-          key={producto.id}
-          nombre={producto.nombre}
-          ytd={producto.ytd}
-          oneyear={producto.oneyear}
-          threeyear={producto.threeyear}
-          fiveyear={producto.fiveyear}
-          textoBoton={"Ver ficha"}
-          linkBoton={`producto/${producto.id}`}
-        />
+          <p>{producto.nombre}</p>
          ))}
       </div>
       </main>
@@ -33,7 +26,7 @@ const Productos = () => {
         <MainFooter/>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Productos;
+export default FichaProducto
