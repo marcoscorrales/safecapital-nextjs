@@ -1,12 +1,10 @@
 import React from 'react'
 import MainFooter from "./MainFooter";
 import MainHeader from "./MainHeader";
-import { useRouter } from 'next/router'
 import {DataProductos} from "../data/data.js";
 
 const FichaProducto = ({productId}) => {
-    // const router = useRouter()
-    // const { id } = router.productId
+    console.log(productId)
   return (
     <div className="bg-[#080C10] w-full">
       <header>
@@ -18,8 +16,9 @@ const FichaProducto = ({productId}) => {
         </h1>
         <div className="flex flex-wrap sm:justify-around justify-center w-full relative z-[1]">
          {DataProductos.map((producto) => (
-          <p>{producto.nombre}</p>
-         ))}
+          <p key={producto.id}>{producto.nombre}</p>
+         ))
+         }
       </div>
       </main>
       <footer>
