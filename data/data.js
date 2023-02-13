@@ -41,16 +41,22 @@ export const DataProductos = [
     },
     {
         id: "6",
-        nombre:"AMUNDI INDEX JP MORGAN",
-        ytd:"3,17 %",
-        oneyear:"-13,48 %",
-        threeyear:"-5,76 %",
-        fiveyear:"-1,50 %"
+        nombre:"Magallanes European Equity E FI",
+        ytd:"14,81 %",
+        oneyear:"15,43 %",
+        threeyear:"16,94 %",
+        fiveyear:"9,23 %"
     },
 
 ]
+  export const datamap1 = [
+     {
+      id: "USA",
+      value: 100,
+    }
+  ];
 
-export const datamap = [
+  export const datamap2 = [
     // {
     //   id: "AFG",
     //   value: 1,
@@ -165,7 +171,7 @@ export const datamap = [
     },
     {
       id: "CHN",
-      value: 260808
+      value: 0
     },
     // {
     //   id: "CIV",
@@ -736,6 +742,32 @@ export const datamap = [
     //   value: 977973,
     // },
   ];
+
+  export const datamap3= [
+    {
+     id: "USA",
+     value: 100,
+   }
+ ]; 
+
+  export const datamap4= [
+    {
+     id: "USA",
+     value: 100,
+   }
+ ]; 
+  export const datamap5= [
+    {
+      id: "JPN",
+      value: 100,
+    },
+ ]; 
+  export const datamap6= [
+    {
+      id: "JPN",
+      value: 100,
+    },
+ ]; 
   
 
   export const geoFeatures = {
