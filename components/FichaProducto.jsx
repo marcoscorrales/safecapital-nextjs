@@ -16,7 +16,7 @@ const FichaProducto = ({productId}) => {
         </h1>
         <div className="flex flex-wrap sm:justify-around justify-center w-full relative z-[1]">
          {DataProductos.map((producto) => (
-          <p key={producto.id}>{producto.nombre}</p>
+          <p key={producto.ISIN}>{producto.nombre}</p>
          ))
          }
       </div>

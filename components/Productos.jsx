@@ -17,14 +17,14 @@ const Productos = () => {
         <div className="flex flex-wrap sm:justify-around justify-center w-full relative z-[1]">
          {DataProductos.map((producto) => (
           <TarjetaFondo
-          key={producto.id}
+          key={producto.ISIN}
           nombre={producto.nombre}
           ytd={producto.ytd}
           oneyear={producto.oneyear}
           threeyear={producto.threeyear}
           fiveyear={producto.fiveyear}
           textoBoton={"Ver ficha"}
-          linkBoton={`producto/${producto.id}`}
+          linkBoton={`producto/${producto.ISIN}`}
         />
          ))}
       </div>

@@ -1,51 +1,189 @@
 export const DataProductos = [
     {
-        id: "1",
-        nombre:"Vanguard U.S. 500 Stock Index Fund",
+        ISIN: "IE0032620787",
+        nombre: "Vanguard U.S. 500 Stock Index Fund",
         ytd:"4,04 %",
         oneyear:"-1,90 %",
         threeyear:"8,92 %",
-        fiveyear:"11,34 %"
+        fiveyear:"11,34 %",
+        descripcion: "The Fund seeks to track the performance of the Index.",
+        riesgo: 5,
+        regiones: {
+          "Estados Unidos": "98,87",
+          "Reino Unido": "0,58",
+          "Europe - ex Euro": "0,38", 
+          "Zona Euro": "0,13", 
+          "Asia - Desarrollada": "0,03"
+        },
+        sectores: {
+          "Tecnología": "23,02",
+          "Salud": "15,90",
+          "Servicios Financieros": "13,89",
+          "Consumo Cíclico": "9,56",
+          "Industria": "9,07"
+        },
+        posiciones: {
+          "Apple Inc": "6,05",
+          "Microsoft Corp": "5,56",
+          "Amazon.com Inc": "2,32",
+          "Berkshire Hathaway Inc Class B": "1,64",
+          "Alphabet Inc Class A": "1,64"
+        }
     },
     {
-        id: "2",
+        "ISIN": "IE0031786142",
         nombre:"Vanguard Emerging Markets Stock Index Fund",
         ytd:"8,28 %",
         oneyear:"-7,26 %",
         threeyear:"0,57 %",
-        fiveyear:"1,06 %"
+        fiveyear:"1,06 %",
+        descripcion: "The Fund seeks to track the performance of the Index.",
+        riesgo: 4,
+        regiones: {
+          "Asia - Emergente": "52,59",
+          "Asia - Desarrollada": "25,58",
+          "Iberoamérica": "8,41", 
+          "Oriente Medio": "7,36", 
+          "África": "3,69"
+        },
+        sectores: {
+          "Servicios Financieros": "  22,14",
+          "Tecnología": "18,70",
+          "Consumo Cíclico": "13,30",
+          "Servicios de Comunicación": "10,41",
+          "Materiales Básicos": "8,90"
+        },
+        posiciones: {
+          "TSMC": "5,69",
+          "Tencent Holdings Ltd": "4,23",
+          "Samsung Electronics Co Ltd": "3,31",
+          "Alibaba Group Holding Ltd": "2,59",
+          "Meituan Class B": "1,56"
+        }
     },
     {
-        id: "3",
+        "ISIN": "IE00B53SZB19",
         nombre:"Nasdaq-100 Index Fund",
         ytd:"7,40 %",
         oneyear:"-19,90 %",
         threeyear:"5,70 %",
-        fiveyear:"8,37 %"
+        fiveyear:"8,37 %",
+        descripcion: "El objetivo del fondo de inversión es replicar su referencia de manera eficiente y con la mayor precisión posible mediante la aplicación de la replicación directa. El Nasdaq 100 Index es un índice de capitalización de mercado libre flotación ajustado que está diseñado para medir el rendimiento de las 100 mayores empresas no financieras nacionales e internacionales enumerados en el NASDAQ. El índice se calcula en USD.",
+        riesgo: 6,
+        regiones: {
+          "Estados Unidos": "97,76",
+          "Zona Euro": "0,87",
+          "Asia - Emergente": "0,57", 
+          "Iberoamérica": "0,46", 
+          "Reino Unido": "0,33"
+        },
+        sectores: {
+          "Tecnología": "48,65",
+          "Servicios de Comunicación": "16,23",
+          "Consumo Cíclico": "15,78",
+          "Salud": "6,62",
+          "Consumo Defensivo": "5,93"
+        },
+        posiciones: {
+          "Microsoft Corp": "12,21",
+          "Apple Inc": "12,03",
+          "Amazon.com Inc": "6,25",
+          "NVIDIA Corp": "4,45",
+          "Tesla Inc": "Consumo Cíclico"
+        }
     },
     {
-        id: "4",
+        "ISIN": "IE0007987690",
         nombre:"Vanguard European Stock Index Fund",
         ytd:"7,70 %",
         oneyear:"2,31 %",
         threeyear:"5,14 %",
-        fiveyear:"6,99 %"
+        fiveyear:"6,99 %",
+        descripcion: "The Fund seeks to provide long-term growth of capital by tracking the performance of the Index.",
+        riesgo: 4,
+        regiones: {
+          "Zona Euro": "48,03",
+          "Europe - ex Euro": "27,48",
+          "Reino Unido": "22,86", 
+          "Estados Unidos": "1,22", 
+          "Asia - Desarrollada": "0,26"
+        },
+        sectores: {
+          "Servicios Financieros": "	16,72",
+          "Salud": "16,36",
+          "Industria": "13,80",
+          "Consumo Defensivo": "13,00",
+          "Consumo Cíclico": "9,98"
+        },
+        posiciones: {
+          "Nestle SA": "3,46",
+          "Novo Nordisk A/S Class B": "2,42",
+          "Roche Holding AG": "2,39",
+          "ASML Holding NV": "2,37",
+          "AstraZeneca PLC": "2,27"
+        }
     },
     {
-        id: "5",
+        "ISIN": "IE0007281425",
         nombre:"Vanguard Japan Stock Index Fund",
         ytd:"3,98 %",
         oneyear:"-3,74 %",
         threeyear:"1,03 %",
-        fiveyear:"3,97 %"
+        fiveyear:"3,97 %",
+        descripcion: "The Fund seeks to track the performance of the Index.",
+        riesgo: 4,
+        regiones: {
+          "Japón": "100,00",
+          "Estados Unidos": "0,00",
+          "Canadá": "0,00", 
+          "Iberoamérica": "0,00", 
+          "Reino Unido": "0,00"
+        },
+        sectores: {
+          "Industria": "22,67",
+          "Tecnología": "15,97",
+          "Consumo Cíclico": "14,60",
+          "Servicios Financieros": "12,21",
+          "Salud": "9,95"
+        },
+        posiciones: {
+          "Toyota Motor Corp": "4,66",
+          "Sony Group Corp": "3,07",
+          "Mitsubishi UFJ Financial Group Inc": "2,58",
+          "Keyence Corp": "2,43",
+          "Daiichi Sankyo Co Ltd": "1,81"
+        }
     },
     {
-        id: "6",
+        "ISIN": "ES0159259011",
         nombre:"Magallanes European Equity E FI",
         ytd:"14,81 %",
         oneyear:"15,43 %",
         threeyear:"16,94 %",
-        fiveyear:"9,23 %"
+        fiveyear:"9,23 %",
+        descripcion: "La gestión toma como referencia la rentabilidad del índice MSCI Total Return Net Europe Se invertirá como mínimo el 75% de la exposición total en renta variable. Los emisores/mercados europeos supondrán, al menos, el 75% de la exposición en renta variable. El resto de la exposición a renta variable se podrá invertir en emisores/mercados de otros países ocde y, hasta un 10%, en valores de emisores/mercados de países emergentes. Los emisores podrán ser de alta, media o baja capitalización. Se invertirá en compañías con perspectivas de revalorización a medio y largo plazo.",
+        riesgo: 4,
+        regiones: {
+          "Zona Euro": "66,74",
+          "Reino Unido": "9,67",
+          "Europe - ex Euro": "7,66", 
+          "Asia - Emergente": "4,54", 
+          "Iberoamérica": "4,20"
+        },
+        sectores: {
+          "Materiales Básicos": "18,28",
+          "Energía": "17,20",
+          "Servicios Financieros": "16,80",
+          "Industria": "16,25",
+          "Consumo Cíclico": "15,23"
+        },
+        posiciones: {
+          "Renault SA": "4,62",
+          "Commerzbank AG": "4,33",
+          "Aker BP ASA": "4,23",
+          "Scorpio Tankers Inc": "4,12",
+          "UniCredit SpA": "3,85"
+        }
     },
 
 ]
