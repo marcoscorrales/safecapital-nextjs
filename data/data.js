@@ -902,7 +902,7 @@ export const DataProductos = [
  ]; 
   export const datamap6= [
     {
-      id: "JPN",
+      id: "USA",
       value: 100,
     },
  ]; 

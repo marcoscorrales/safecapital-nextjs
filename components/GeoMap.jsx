@@ -8,7 +8,7 @@ function MyResponsiveChoropleth() {
   return (
     <div style={{ height: "500px"}}>
       <ResponsiveChoropleth
-        data={datamap5}
+        data={datamap1}
         features={countries.features}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
         domain={[0, 1]}
