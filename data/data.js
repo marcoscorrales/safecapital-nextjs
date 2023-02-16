@@ -1,192 +1,196 @@
-export const DataProductos = [
+export const data = {
+ productos : [
     {
         ISIN: "IE0032620787",
         nombre: "Vanguard U.S. 500 Stock Index Fund",
-        ytd:"4,04 %",
-        oneyear:"-1,90 %",
-        threeyear:"8,92 %",
-        fiveyear:"11,34 %",
-        descripcion: "The Fund seeks to track the performance of the Index.",
+        ytd: 4.04,
+        oneyear: -1.90,
+        threeyear: 8.92,
+        fiveyear: 11.34,
+        descripcion: "El S&P 500 (Standard & Poor's 500) es un índice bursátil que representa el rendimiento de las 500 mayores empresas que cotizan en bolsa en los Estados Unidos. Estas empresas son seleccionadas por su capitalización de mercado. El S&P 500 se considera una medida amplia del mercado de valores estadounidense, ya que incluye empresas de varios sectores, como tecnología, servicios financieros, salud, energía y consumo discrecional.",
         riesgo: 5,
         regiones: {
-          "Estados Unidos": "98,87",
-          "Reino Unido": "0,58",
-          "Europe - ex Euro": "0,38", 
-          "Zona Euro": "0,13", 
-          "Asia - Desarrollada": "0,03"
+          "Estados Unidos": 98.87,
+          "Reino Unido": 0.58,
+          "Europe - ex Euro": 0.38, 
+          "Zona Euro": 0.13, 
+          "Asia - Desarrollada": 0.03
         },
         sectores: {
-          "Tecnología": "23,02",
-          "Salud": "15,90",
-          "Servicios Financieros": "13,89",
-          "Consumo Cíclico": "9,56",
-          "Industria": "9,07"
+          "Tecnología": 23.02,
+          "Salud": 15.90,
+          "Servicios Financieros": 13.89,
+          "Consumo Cíclico": 9.56,
+          "Industria": 9.07
         },
         posiciones: {
-          "Apple Inc": "6,05",
-          "Microsoft Corp": "5,56",
-          "Amazon.com Inc": "2,32",
-          "Berkshire Hathaway Inc Class B": "1,64",
-          "Alphabet Inc Class A": "1,64"
+          "Apple Inc": 6.05,
+          "Microsoft Corp": 5.56,
+          "Amazon.com Inc": 2.32,
+          "Berkshire Hathaway Inc Class B": 1.64,
+          "Alphabet Inc Class A": 1.64
         }
     },
     {
-        "ISIN": "IE0031786142",
+        ISIN: "IE0031786142",
         nombre:"Vanguard Emerging Markets Stock Index Fund",
-        ytd:"8,28 %",
-        oneyear:"-7,26 %",
-        threeyear:"0,57 %",
-        fiveyear:"1,06 %",
-        descripcion: "The Fund seeks to track the performance of the Index.",
+        ytd: 8.28,
+        oneyear: -7.26,
+        threeyear: 0.57,
+        fiveyear: 1.06,
+        descripcion: "El Vanguard Emerging Markets Stock Index Fund es un fondo de inversión que busca replicar el desempeño de los mercados de valores emergentes al invertir en empresas que cotizan en esos mercados. El fondo invierte principalmente en acciones de empresas de países en vías de desarrollo, como Brasil, China, India, Sudáfrica y muchos otros, y ofrece a los inversores exposición a los mercados emergentes en un solo fondo.",
         riesgo: 4,
         regiones: {
-          "Asia - Emergente": "52,59",
-          "Asia - Desarrollada": "25,58",
-          "Iberoamérica": "8,41", 
-          "Oriente Medio": "7,36", 
-          "África": "3,69"
+          "Asia - Emergente": 52.59,
+          "Asia - Desarrollada": 25.58,
+          "Iberoamérica": 8.41, 
+          "Oriente Medio": 7.36, 
+          "África": 3.69
         },
         sectores: {
-          "Servicios Financieros": "  22,14",
-          "Tecnología": "18,70",
-          "Consumo Cíclico": "13,30",
-          "Servicios de Comunicación": "10,41",
-          "Materiales Básicos": "8,90"
+          "Servicios Financieros": 22.14,
+          "Tecnología": 18.70,
+          "Consumo Cíclico": 13.30,
+          "Servicios de Comunicación": 10.41,
+          "Materiales Básicos": 8.90
         },
         posiciones: {
-          "TSMC": "5,69",
-          "Tencent Holdings Ltd": "4,23",
-          "Samsung Electronics Co Ltd": "3,31",
-          "Alibaba Group Holding Ltd": "2,59",
-          "Meituan Class B": "1,56"
+          "TSMC": 5.69,
+          "Tencent Holdings Ltd": 4.23,
+          "Samsung Electronics Co Ltd": 3.31,
+          "Alibaba Group Holding Ltd": 2.59,
+          "Meituan Class B": 1.56
         }
     },
     {
-        "ISIN": "IE00B53SZB19",
+        ISIN: "IE00B53SZB19",
         nombre:"Nasdaq-100 Index Fund",
-        ytd:"7,40 %",
-        oneyear:"-19,90 %",
-        threeyear:"5,70 %",
-        fiveyear:"8,37 %",
-        descripcion: "El objetivo del fondo de inversión es replicar su referencia de manera eficiente y con la mayor precisión posible mediante la aplicación de la replicación directa. El Nasdaq 100 Index es un índice de capitalización de mercado libre flotación ajustado que está diseñado para medir el rendimiento de las 100 mayores empresas no financieras nacionales e internacionales enumerados en el NASDAQ. El índice se calcula en USD.",
+        ytd: 7.40,
+        oneyear: -19.90,
+        threeyear: 5.70,
+        fiveyear: 8.37,
+        descripcion: "El objetivo del fondo de inversión es replicar su referencia de manera eficiente y con la mayor precisión posible mediante la aplicación de la replicación directa. El Nasdaq 100 Index es un índice de capitalización de mercado libre flotación ajustado que está diseñado para medir el rendimiento de las 100 mayores empresas no financieras nacionales e internacionales enumerados en el NASDAQ.",
         riesgo: 6,
         regiones: {
-          "Estados Unidos": "97,76",
-          "Zona Euro": "0,87",
-          "Asia - Emergente": "0,57", 
-          "Iberoamérica": "0,46", 
-          "Reino Unido": "0,33"
+          "Estados Unidos": 97.76,
+          "Zona Euro": 0.87,
+          "Asia - Emergente": 0.57, 
+          "Iberoamérica": 0.46, 
+          "Reino Unido": 0.33
         },
         sectores: {
-          "Tecnología": "48,65",
-          "Servicios de Comunicación": "16,23",
-          "Consumo Cíclico": "15,78",
-          "Salud": "6,62",
-          "Consumo Defensivo": "5,93"
+          "Tecnología": 48.65,
+          "Servicios de Comunicación": 16.23,
+          "Consumo Cíclico": 15.78,
+          "Salud": 6.62,
+          "Consumo Defensivo": 5.93
         },
         posiciones: {
-          "Microsoft Corp": "12,21",
-          "Apple Inc": "12,03",
-          "Amazon.com Inc": "6,25",
-          "NVIDIA Corp": "4,45",
-          "Tesla Inc": "Consumo Cíclico"
+          "Microsoft Corp": 12.21,
+          "Apple Inc": 12.03,
+          "Amazon.com Inc": 6.25,
+          "NVIDIA Corp": 4.45,
+          "Tesla Inc": 3.79
         }
     },
     {
-        "ISIN": "IE0007987690",
+        ISIN: "IE0007987690",
         nombre:"Vanguard European Stock Index Fund",
-        ytd:"7,70 %",
-        oneyear:"2,31 %",
-        threeyear:"5,14 %",
-        fiveyear:"6,99 %",
-        descripcion: "The Fund seeks to provide long-term growth of capital by tracking the performance of the Index.",
+        ytd: 7.70,
+        oneyear: 2.31,
+        threeyear: 5.14,
+        fiveyear: 6.99,
+        descripcion: "El Fondo Vanguard European Stock Index Fund busca hacer seguimiento al índice FTSE Developed Europe All Cap Index, que mide el desempeño de las empresas de gran, mediana y pequeña capitalización de los mercados desarrollados de Europa. El fondo invierte en una amplia gama de empresas europeas diversificadas y busca replicar el desempeño del índice subyacente. El enfoque del fondo es de inversión pasiva, lo que significa que busca igualar el desempeño del índice subyacente en lugar de superarlo. El fondo tiene una estructura de bajo costo, con una tasa de gastos muy baja, lo que lo hace atractivo para los inversores que buscan una exposición diversificada al mercado de acciones europeo a largo plazo.",
         riesgo: 4,
         regiones: {
-          "Zona Euro": "48,03",
-          "Europe - ex Euro": "27,48",
-          "Reino Unido": "22,86", 
-          "Estados Unidos": "1,22", 
-          "Asia - Desarrollada": "0,26"
+          "Zona Euro": 48.03,
+          "Europe - ex Euro": 27.48,
+          "Reino Unido": 22.86,
+          "Estados Unidos": 1.22, 
+          "Asia - Desarrollada": 0.26
         },
         sectores: {
-          "Servicios Financieros": "	16,72",
-          "Salud": "16,36",
-          "Industria": "13,80",
-          "Consumo Defensivo": "13,00",
-          "Consumo Cíclico": "9,98"
+          "Servicios Financieros": 16.72,
+          "Salud": 16.36,
+          "Industria": 13.80,
+          "Consumo Defensivo": 13.00,
+          "Consumo Cíclico": 9.98
         },
         posiciones: {
-          "Nestle SA": "3,46",
-          "Novo Nordisk A/S Class B": "2,42",
-          "Roche Holding AG": "2,39",
-          "ASML Holding NV": "2,37",
-          "AstraZeneca PLC": "2,27"
+          "Nestle SA": 3.46,
+          "Novo Nordisk A/S Class B": 2.42,
+          "Roche Holding AG": 2.39,
+          "ASML Holding NV": 2.37,
+          "AstraZeneca PLC": 2.27
         }
     },
     {
-        "ISIN": "IE0007281425",
+        ISIN: "IE0007281425",
         nombre:"Vanguard Japan Stock Index Fund",
-        ytd:"3,98 %",
-        oneyear:"-3,74 %",
-        threeyear:"1,03 %",
-        fiveyear:"3,97 %",
-        descripcion: "The Fund seeks to track the performance of the Index.",
+        ytd: 3.98,
+        oneyear: -3.74,
+        threeyear: 1.03,
+        fiveyear: 3.97,
+        descripcion: "Vanguard Japan Stock Index Fund es un fondo de inversión que se enfoca en seguir el rendimiento del índice de referencia MSCI Japan Index. Este índice incluye compañías japonesas de gran capitalización, y el fondo intenta replicar su rendimiento a través de la compra de acciones de estas empresas. El objetivo del fondo es proporcionar a los inversores una exposición amplia y diversificada al mercado de renta variable japonés, a través de un enfoque de inversión pasiva.Vanguard Japan Stock Index Fund es una forma de invertir en Japón con bajos costos, ya que su estructura de gestión pasiva permite que los gastos de administración sean más bajos que en los fondos de gestión activa.",
         riesgo: 4,
         regiones: {
-          "Japón": "100,00",
-          "Estados Unidos": "0,00",
-          "Canadá": "0,00", 
-          "Iberoamérica": "0,00", 
-          "Reino Unido": "0,00"
+          "Japón": 100.00,
+          "Estados Unidos": 0.00,
+          "Canadá": 0.00, 
+          "Iberoamérica": 0.00, 
+          "Reino Unido": 0.00
         },
         sectores: {
-          "Industria": "22,67",
-          "Tecnología": "15,97",
-          "Consumo Cíclico": "14,60",
-          "Servicios Financieros": "12,21",
-          "Salud": "9,95"
+          "Industria": 22.67,
+          "Tecnología": 15.97,
+          "Consumo Cíclico": 14.60,
+          "Servicios Financieros": 12.21,
+          "Salud":9.95
         },
         posiciones: {
-          "Toyota Motor Corp": "4,66",
-          "Sony Group Corp": "3,07",
-          "Mitsubishi UFJ Financial Group Inc": "2,58",
-          "Keyence Corp": "2,43",
-          "Daiichi Sankyo Co Ltd": "1,81"
+          "Toyota Motor Corp": 4.66,
+          "Sony Group Corp": 3.07,
+          "Mitsubishi UFJ Financial Group Inc": 2.58,
+          "Keyence Corp": 2.43,
+          "Daiichi Sankyo Co Ltd": 1.81
         }
     },
     {
-        "ISIN": "ES0159259011",
+        ISIN: "ES0159259011",
         nombre:"Magallanes European Equity E FI",
-        ytd:"14,81 %",
-        oneyear:"15,43 %",
-        threeyear:"16,94 %",
-        fiveyear:"9,23 %",
+        ytd: 14.81,
+        oneyear: 15.43,
+        threeyear: 16.94,
+        fiveyear: 9.23,
         descripcion: "La gestión toma como referencia la rentabilidad del índice MSCI Total Return Net Europe Se invertirá como mínimo el 75% de la exposición total en renta variable. Los emisores/mercados europeos supondrán, al menos, el 75% de la exposición en renta variable. El resto de la exposición a renta variable se podrá invertir en emisores/mercados de otros países ocde y, hasta un 10%, en valores de emisores/mercados de países emergentes. Los emisores podrán ser de alta, media o baja capitalización. Se invertirá en compañías con perspectivas de revalorización a medio y largo plazo.",
         riesgo: 4,
         regiones: {
-          "Zona Euro": "66,74",
-          "Reino Unido": "9,67",
-          "Europe - ex Euro": "7,66", 
-          "Asia - Emergente": "4,54", 
-          "Iberoamérica": "4,20"
+          "Zona Euro": 66.74,
+          "Reino Unido": 9.67,
+          "Europe - ex Euro": 7.66, 
+          "Asia - Emergente": 4.54, 
+          "Iberoamérica": 4.2,
         },
         sectores: {
-          "Materiales Básicos": "18,28",
-          "Energía": "17,20",
-          "Servicios Financieros": "16,80",
-          "Industria": "16,25",
-          "Consumo Cíclico": "15,23"
+          "Materiales Básicos": 18.28,
+          "Energía": 17.20,
+          "Servicios Financieros": 16.80,
+          "Industria": 16.25,
+          "Consumo Cíclico": 5.23
         },
         posiciones: {
-          "Renault SA": "4,62",
-          "Commerzbank AG": "4,33",
-          "Aker BP ASA": "4,23",
-          "Scorpio Tankers Inc": "4,12",
-          "UniCredit SpA": "3,85"
+          "Renault SA": 4.62,
+          "Commerzbank AG": 4.33,
+          "Aker BP ASA": 4.23,
+          "Scorpio Tankers Inc": 4.12,
+          "UniCredit SpA": 3.85
         }
     },
+] 
+}
 
-]
+
+
   export const datamap1 = [
      {
       id: "USA",
