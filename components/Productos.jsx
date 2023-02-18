@@ -2,9 +2,9 @@ import React from "react";
 import MainFooter from "./MainFooter";
 import MainHeader from "./MainHeader";
 import TarjetaFondo from "./TarjetaFondo";
-import {DataProductos} from "../data/data.js";
 
-const Productos = () => {
+const Productos = ({dataproductos}) => {
+  console.log(dataproductos)
   return (
     <div className="bg-[#080C10] w-full">
       <header>
@@ -15,7 +15,7 @@ const Productos = () => {
           Fondos indexados
         </h1>
         <div className="flex flex-wrap sm:justify-around justify-center w-full relative z-[1]">
-         {DataProductos.map((producto) => (
+         {dataproductos.map((producto) => (
           <TarjetaFondo
           key={producto.ISIN}
           nombre={producto.nombre}
