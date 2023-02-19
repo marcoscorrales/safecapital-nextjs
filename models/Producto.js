@@ -13,6 +13,7 @@ const productoSchema = new mongoose.Schema(
         regiones: {type: Object, required: true},
         sectores: {type: Object, required: true},
         posiciones: {type: Object, required: true},
+        datamap: {type: Array, required: true}
     },
     {
         timestamps: true,

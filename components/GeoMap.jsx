@@ -4,11 +4,11 @@ import countries from "../data/countries.json";
 import { datamap1, datamap2, datamap5 } from "../data/data";
 
 
-function MyResponsiveChoropleth() {
+function MyResponsiveChoropleth({data}) {
   return (
     <div style={{ height: "500px"}}>
       <ResponsiveChoropleth
-        data={datamap1}
+        data={data}
         features={countries.features}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
         domain={[0, 1]}

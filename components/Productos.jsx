@@ -19,10 +19,10 @@ const Productos = ({dataproductos}) => {
           <TarjetaFondo
           key={producto.ISIN}
           nombre={producto.nombre}
-          ytd={producto.ytd}
-          oneyear={producto.oneyear}
-          threeyear={producto.threeyear}
-          fiveyear={producto.fiveyear}
+          ytd={producto.ytd+"%"}
+          oneyear={producto.oneyear+"%"}
+          threeyear={producto.threeyear+"%"}
+          fiveyear={producto.fiveyear+"%"}
           textoBoton={"Ver ficha"}
           linkBoton={`producto/${producto.ISIN}`}
         />

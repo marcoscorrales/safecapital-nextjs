@@ -21,7 +21,7 @@ export default function ComponenteProducto({productos}) {
         </h1>
         <div className="flex flex-col justify-center gap-8 w-full relative z-[1]">
           <div className="flex flex-col">
-            <h2 className="text-white text-center text-3xl m-10">
+            <h2 className="text-[#01A78A] text-center text-3xl m-10">
               Descripción
             </h2>
             <div>
@@ -31,7 +31,7 @@ export default function ComponenteProducto({productos}) {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <h2 className="text-white text-center text-3xl m-10">
+            <h2 className="text-[#01A78A] text-center text-3xl m-10">
               Indicador de riesgo
             </h2>
             <div className="max-w-[450px] w-full flex justify-center">
@@ -73,12 +73,12 @@ export default function ComponenteProducto({productos}) {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <h2 className="text-white text-center text-3xl m-10">
+            <h2 className="text-[#01A78A] text-center text-3xl m-10">
               Rentabilidades
             </h2>
             <table border="0" className="max-w-[450px] w-full">
               <tbody>
-                <tr>
+                <tr className="border-b-2 border-solid border-b-white">
                   <td className="font-poppins font-normal text-white text-[17px] xs:text-[20px] leading-[30.8px]">Rentabilidades acumul.</td>
                   <td className="font-poppins font-normal text-white text-right text-[17px] xs:text-[20px] leading-[30.8px]">%</td>
                 </tr>
@@ -110,13 +110,13 @@ export default function ComponenteProducto({productos}) {
             </table>
           </div>
           <div className="flex flex-col items-center">
-            <h2 className="text-white text-center text-3xl m-10">
+            <h2 className="text-[#01A78A] text-center text-3xl m-10">
               Estilo
             </h2>
             <div className="flex flex-wrap items-center justify-evenly gap-10 w-full">
             <table border="0" className="max-w-[450px] w-full">
               <tbody>
-                <tr>
+                <tr className="border-b-2 border-solid border-b-white">
                   <td className="font-poppins font-normal text-white text-[17px] xs:text-[20px] leading-[30.8px]">5 regiones principales</td>
                   <td className="font-poppins font-normal text-white text-right text-[17px] xs:text-[20px] leading-[30.8px]">%</td>
                 </tr>
@@ -136,7 +136,7 @@ export default function ComponenteProducto({productos}) {
             </table>
             <table border="0" className="max-w-[450px] w-full">
               <tbody>
-                <tr>
+                <tr className="border-b-2 border-solid border-b-white">
                   <td className="font-poppins font-normal text-white text-[17px] xs:text-[20px] leading-[30.8px]">5 mayores sectores</td>
                   <td className="font-poppins font-normal text-white text-right text-[17px] xs:text-[20px] leading-[30.8px]">%</td>
                 </tr>
@@ -155,7 +155,7 @@ export default function ComponenteProducto({productos}) {
             </table>
             <table border="0" className="max-w-[450px] w-full">
               <tbody>
-                <tr>
+                <tr className="border-b-2 border-solid border-b-white">
                   <td className="font-poppins font-normal text-white text-[17px] xs:text-[20px] leading-[30.8px]">5 mayores posic.</td>
                   <td className="font-poppins font-normal text-white text-right text-[17px] xs:text-[20px] leading-[30.8px]">%</td>
                 </tr>
@@ -175,7 +175,7 @@ export default function ComponenteProducto({productos}) {
             </div>
           </div>
         </div>
-        <MyResponsiveGeoMap />
+        <MyResponsiveGeoMap data={dataproducto.datamap} />
       </main>
       <footer>
         <MainFooter />

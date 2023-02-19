@@ -10,11 +10,11 @@ export const data = {
         descripcion: "El S&P 500 (Standard & Poor's 500) es un índice bursátil que representa el rendimiento de las 500 mayores empresas que cotizan en bolsa en los Estados Unidos. Estas empresas son seleccionadas por su capitalización de mercado. El S&P 500 se considera una medida amplia del mercado de valores estadounidense, ya que incluye empresas de varios sectores, como tecnología, servicios financieros, salud, energía y consumo discrecional.",
         riesgo: 5,
         regiones: {
-          "Estados Unidos": 98.87,
-          "Reino Unido": 0.58,
-          "Europe - ex Euro": 0.38, 
-          "Zona Euro": 0.13, 
-          "Asia - Desarrollada": 0.03
+          "Estados Unidos": 100,
+          "Reino Unido": 0,
+          "Europe - ex Euro": 0, 
+          "Zona Euro": 0, 
+          "Asia - Desarrollada": 0
         },
         sectores: {
           "Tecnología": 23.02,
@@ -29,7 +29,13 @@ export const data = {
           "Amazon.com Inc": 2.32,
           "Berkshire Hathaway Inc Class B": 1.64,
           "Alphabet Inc Class A": 1.64
-        }
+        },
+        datamap: [
+          {
+            id: "USA",
+            value: 100,
+          }
+        ]
     },
     {
         ISIN: "IE0031786142",
@@ -60,7 +66,109 @@ export const data = {
           "Samsung Electronics Co Ltd": 3.31,
           "Alibaba Group Holding Ltd": 2.59,
           "Meituan Class B": 1.56
-        }
+        },
+        datamap: [
+          {
+            id: "BRA",
+            value: 4.78,
+          },
+          {
+            id: "CHL",
+            value: 0.50,
+          },
+          {
+            id: "CHN",
+            value: 35.14,
+          },
+          {
+            id: "COL",
+            value: 0.16,
+          },
+          {
+            id: "CZE",
+            value: 0.16,
+          },
+          {
+            id: "EGY",
+            value: 0.07,
+          },
+          {
+            id: "GRC",
+            value: 0.25,
+          },
+          {
+            id: "HKG",
+            value: 0.05,
+          },
+          {
+            id: "HUN",
+            value: 0.16,
+          },
+          {
+            id: "IND",
+            value: 12.60,
+          },
+          {
+            id: "IND",
+            value: 1.81,
+          },
+          {
+            id: "KWT",
+            value: 0.81,
+          },
+          {
+            id: "MYS",
+            value: 1.45,
+          },
+          {
+            id: "PER",
+            value: 0.22,
+          },
+          {
+            id: "PHL",
+            value: 0.72,
+          },
+          {
+            id: "POL",
+            value: 0.60,
+          },
+          {
+            id: "MEX",
+            value: 2.10,
+          },
+          {
+            id: "QAT",
+            value: 1.03,
+          },
+          {
+            id: "ZAF",
+            value: 3.49,
+          },
+          {
+            id: "SAU",
+            value: 4.23,
+          },
+          {
+            id: "KOR",
+            value: 11.17,
+          },
+          {
+            id: "TWN",
+            value: 14.38,
+          },
+          {
+            id: "THA",
+            value: 1.87,
+          },
+          {
+            id: "TUR",
+            value: 0.28,
+          },
+          {
+            id: "ARE",
+            value: 1.25,
+          },
+        ]
     },
     {
         ISIN: "IE00B53SZB19",
@@ -72,11 +180,11 @@ export const data = {
         descripcion: "El objetivo del fondo de inversión es replicar su referencia de manera eficiente y con la mayor precisión posible mediante la aplicación de la replicación directa. El Nasdaq 100 Index es un índice de capitalización de mercado libre flotación ajustado que está diseñado para medir el rendimiento de las 100 mayores empresas no financieras nacionales e internacionales enumerados en el NASDAQ.",
         riesgo: 6,
         regiones: {
-          "Estados Unidos": 97.76,
-          "Zona Euro": 0.87,
-          "Asia - Emergente": 0.57, 
-          "Iberoamérica": 0.46, 
-          "Reino Unido": 0.33
+          "Estados Unidos": 100,
+          "Zona Euro": 0,
+          "Asia - Emergente": 0, 
+          "Iberoamérica": 0, 
+          "Reino Unido": 0
         },
         sectores: {
           "Tecnología": 48.65,
@@ -91,7 +199,13 @@ export const data = {
           "Amazon.com Inc": 6.25,
           "NVIDIA Corp": 4.45,
           "Tesla Inc": 3.79
-        }
+        },
+        datamap: [
+          {
+            id: "USA",
+            value: 100,
+          }
+        ]
     },
     {
         ISIN: "IE0007987690",
@@ -106,8 +220,8 @@ export const data = {
           "Zona Euro": 48.03,
           "Europe - ex Euro": 27.48,
           "Reino Unido": 22.86,
-          "Estados Unidos": 1.22, 
-          "Asia - Desarrollada": 0.26
+          "Estados Unidos": 1.48, 
+          "Asia - Desarrollada": 0
         },
         sectores: {
           "Servicios Financieros": 16.72,
@@ -122,7 +236,13 @@ export const data = {
           "Roche Holding AG": 2.39,
           "ASML Holding NV": 2.37,
           "AstraZeneca PLC": 2.27
-        }
+        },
+        datamap: [
+          {
+            id: "AUT",
+            value: 0.28,
+          }
+        ]
     },
     {
         ISIN: "IE0007281425",
@@ -153,7 +273,13 @@ export const data = {
           "Mitsubishi UFJ Financial Group Inc": 2.58,
           "Keyence Corp": 2.43,
           "Daiichi Sankyo Co Ltd": 1.81
-        }
+        },
+        datamap: [
+          {
+            id: "JPN",
+            value: 100,
+          }
+        ]
     },
     {
         ISIN: "ES0159259011",
@@ -184,7 +310,14 @@ export const data = {
           "Aker BP ASA": 4.23,
           "Scorpio Tankers Inc": 4.12,
           "UniCredit SpA": 3.85
-        }
+        },
+        datamap: [
+          {
+            id: "USA",
+            value: 100,
+          }
+        ]
+      
     },
 ] 
 }
