@@ -25,7 +25,7 @@ export default function ComponenteProducto({productos}) {
               Descripción
             </h2>
             <div>
-              <p className={`text-white text-justify text-xl border-2`}>
+              <p className={`text-white text-justify text-xl border-2 p-4`}>
                 {dataproducto.descripcion}
               </p>
             </div>

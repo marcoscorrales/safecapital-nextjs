@@ -1,12 +1,11 @@
 import React from "react";
 import { ResponsiveChoropleth } from "@nivo/geo";
 import countries from "../data/countries.json";
-import { datamap1, datamap2, datamap5 } from "../data/data";
 
 
 function MyResponsiveChoropleth({data}) {
   return (
-    <div style={{ height: "500px"}}>
+    <div className="h-[500px] w-full">
       <ResponsiveChoropleth
         data={data}
         features={countries.features}
