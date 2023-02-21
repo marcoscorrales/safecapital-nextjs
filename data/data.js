@@ -1,3 +1,5 @@
+import bcrypt from 'bcryptjs';
+
 export const data = {
  productos : [
     {
@@ -443,7 +445,21 @@ export const data = {
         ]
       
     },
-] 
+],
+users: [
+  {
+    name: 'Marcos',
+    email: 'admin@correo.com',
+    password: bcrypt.hashSync('123456789'),
+    isAdmin:true,
+  },
+  {
+    name: 'Paco',
+    email: 'paco@correo.com',
+    password: bcrypt.hashSync('123456789'),
+    isAdmin:false,
+  },
+]
 }
   
   export const geoFeatures = {
