@@ -3,15 +3,19 @@ import React, { useState } from 'react'
 import Logo from "../public/images/logo.png";
 import { MdMenu, MdClose } from "react-icons/md";
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 
 const MainHeader = () => {
+
+    const { status, data: session } = useSession();
+
     const [toggle, setToggle] = useState(false);
 
   return (
         <nav className="w-full flex py-6 justify-between items-center overflow-hidden">
           <Link href="/" className="flex items-center font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px]">
             <Image
-              className="my-0 ml-10 w-20 cursor-pointer"
+              className="my-0 ml-1 xs:ml-10 xs:w-20 w-16 cursor-pointer"
               src={Logo}
               alt="/"
             ></Image>
@@ -29,7 +33,18 @@ const MainHeader = () => {
               <Link href="/productos">Productos</Link>
             </li>
             <li className="text-white mr-10">
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/login?redirect=/dashboard">Dashboard</Link>
+            </li>
+            <li className="text-[#00FDA8] mr-10">
+              {status === 'loading' ? (
+                'Loading'
+              ) : session?.user ? (
+                session.user.name
+              ) : (
+              <Link href="/login">Login</Link>
+              )
+            }
+              
             </li>
           </ul>
 

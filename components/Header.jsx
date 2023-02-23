@@ -7,8 +7,12 @@ import {MdEuro, MdExpandMore, MdMenu} from 'react-icons/md';
 import {BiDollar} from 'react-icons/bi';
 import { SideBarContext } from '../context/SideBarContext';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 const Header = () => {
+    
+    const { status, data: session } = useSession();
+
        //Context para ocultar o mostrar el sidebar
        const {toggleSideBar} = useContext(SideBarContext)
        const handleClick = () => {
@@ -27,13 +31,21 @@ const Header = () => {
                     <MdEuro className='w-[50%] h-full flex items-center justify-center text-[1.3rem] bg-[#1E1F21] rounded-md text-white' />
                     <BiDollar className='w-[50%] h-full flex items-center justify-center text-[1.3rem]'/>
                 </div>
+
+                {status === 'loading' ? (
+                'Loading'
+              ) : session?.user ? (
                 <div className='flex gap-4 items-center max-[1024px]:gap-8'>
-                    <div className='block w-12 h-12 rounded-[50%] overflow-hidden'>
-                        <Image src={Profile} className='w-full' alt="profile"/>
-                    </div>
-                    <h5 className='text-xl font-medium text-white '>Marcos</h5>
-                    <MdExpandMore className='h-full flex items-center justify-center text-[2.3rem] cursor-pointer max-[1024px]:hidden text-white '/>
-                </div>
+                <div className='block w-12 h-12 rounded-[50%] overflow-hidden'>
+                <Image src={Profile} className='w-full' alt="profile"/>
+            </div>
+            <h5 className='text-xl font-medium text-white '>{session.user.name}</h5>
+            <MdExpandMore className='h-full flex items-center justify-center text-[2.3rem] cursor-pointer max-[1024px]:hidden text-white '/>
+            </div>
+              ) : (
+                <p className='text-white'>Acceso no autorizado</p>
+              )}
+                    
                 <button id='menu-btn' className='hidden max-[1024px]:inline  max-[1024px]:bg-transparent'>
                     <MdMenu onClick={handleClick} size={23}className="text-white"/>
                 </button>

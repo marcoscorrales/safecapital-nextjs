@@ -1,28 +1,56 @@
 import Link from "next/link";
-import React from "react";
-import Boton from "../components/Boton";
+import React, { useEffect } from "react";
+import { signIn, useSession } from 'next-auth/react';
 import MainFooter from "../components/MainFooter";
 import MainHeader from "../components/MainHeader";
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+import { useRouter } from "next/router";
 
 export default function LoginScreen() {
+  const { data: session } = useSession();
+
+  const router = useRouter();
+  const { redirect } = router.query;
+
+  useEffect(() => {
+   if(session?.user){
+      router.push(redirect || '/')
+   }
+  }, [router, session, redirect])
+  
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const submitHandler = ({ email, password }) => {
-    console.log(email, password);
+  const submitHandler = async ({ email, password }) => {
+    try {
+      const result = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+      });
+      if(result.error) {
+        toast.error(result.error);
+      }
+    } catch (err) {
+      toast.error(getError(err));
+    }
   };
   return (
-    <div className="bg-[#080C10] w-full h-full min-h-screen">
+    <div className="bg-[#080C10] w-full h-full min-h-screen flex flex-col justify-between">
       <header>
         <MainHeader />
       </header>
 
-      <main className="container m-auto mt-4 px-4">
+      <ToastContainer position="bottom-center" limit={1}/>
+
+      <main className="xl:max-w-[1280px] container mt-4 px-4 flex-1">
         <form
-          className="mx-auto max-w-screen-md"
+          className="mx-auto w-full ss:w-[600px]"
           onSubmit={handleSubmit(submitHandler)}
         >
           <h1 className="font-poppins font-normal text-gray-300 text-[30px]">
@@ -80,7 +108,7 @@ export default function LoginScreen() {
         </form>
       </main>
 
-      <footer className="absolute bottom-0 w-full">
+      <footer>
         <MainFooter />
       </footer>
     </div>
