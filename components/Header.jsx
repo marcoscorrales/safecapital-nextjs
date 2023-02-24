@@ -7,11 +7,17 @@ import {MdEuro, MdExpandMore, MdMenu} from 'react-icons/md';
 import {BiDollar} from 'react-icons/bi';
 import { SideBarContext } from '../context/SideBarContext';
 import Link from 'next/link';
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
+import {Menu} from '@headlessui/react'
+import DropdownLink from './DropdownLink';
 
 const Header = () => {
     
     const { status, data: session } = useSession();
+
+    const logoutClickHandler = () =>{
+      signOut({ callbackUrl: '/login'})
+    }
 
        //Context para ocultar o mostrar el sidebar
        const {toggleSideBar} = useContext(SideBarContext)
@@ -35,16 +41,33 @@ const Header = () => {
                 {status === 'loading' ? (
                 'Loading'
               ) : session?.user ? (
-                <div className='flex gap-4 items-center max-[1024px]:gap-8'>
-                <div className='block w-12 h-12 rounded-[50%] overflow-hidden'>
-                <Image src={Profile} className='w-full' alt="profile"/>
-            </div>
-            <h5 className='text-xl font-medium text-white '>{session.user.name}</h5>
-            <MdExpandMore className='h-full flex items-center justify-center text-[2.3rem] cursor-pointer max-[1024px]:hidden text-white '/>
-            </div>
-              ) : (
-                <p className='text-white'>Acceso no autorizado</p>
-              )}
+                <Menu
+              as="div"
+            >
+              <Menu.Button className="flex gap-4 items-center max-[1024px]:gap-8">
+                <div className="block w-12 h-12 rounded-[50%] overflow-hidden">
+                  <Image src={Profile} className="w-full" alt="profile" />
+                </div>
+                <h5 className="text-xl font-medium text-white ">
+                  {session.user.name}
+                </h5>
+                <MdExpandMore className="h-full flex items-center justify-center text-[2.3rem] cursor-pointer max-[1024px]:hidden text-white " />
+              </Menu.Button>
+              <Menu.Items className="absolute right-0 w-56 origin-top-right bg-[#1F1F21] shadow-lg">
+                <Menu.Item>
+                  <DropdownLink className="flex p-2 text-[16px] text-white hover:bg-[#242425]" href="/dashborad">Historial</DropdownLink>
+                </Menu.Item>
+                <Menu.Item>
+                  <DropdownLink className="flex p-2 text-[16px] text-white hover:bg-[#242425]" href="/dashborad">Perfil</DropdownLink>
+                </Menu.Item>
+                <Menu.Item>
+                  <a className="flex p-2 text-[16px] text-white hover:bg-[#242425]" href="#" onClick={logoutClickHandler}>Cerrar sesión</a>
+                </Menu.Item>
+              </Menu.Items>
+            </Menu>
+          ) : (
+            <p className="text-white">Acceso no autorizado</p>
+          )}
                     
                 <button id='menu-btn' className='hidden max-[1024px]:inline  max-[1024px]:bg-transparent'>
                     <MdMenu onClick={handleClick} size={23}className="text-white"/>

@@ -74,6 +74,16 @@ const MainHeader = () => {
                 <li className="text-white mb-4">
                   <Link href="/dashboard">Dashboard</Link>
                 </li>
+                <li className="text-white mb-4">
+              {status === 'loading' ? (
+                'Loading'
+              ) : session?.user ? (
+                session.user.name
+              ) : (
+              <Link href="/login">Login</Link>
+              )
+            }
+               </li>
               </ul>
             </div>
           </div>
