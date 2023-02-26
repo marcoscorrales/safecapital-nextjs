@@ -9,7 +9,7 @@ export default function ComponenteProducto({productos}) {
   const router = useRouter();
   const productISIN = router.query.producto;
   let dataproducto = productos.find((x) => x.ISIN === productISIN);
-  console.log(dataproducto.regiones[1]);
+
   return (
     <div className="bg-[#080C10] w-full">
       <header>
