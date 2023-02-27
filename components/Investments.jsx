@@ -1,12 +1,30 @@
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {MdChevronRight} from 'react-icons/md'; 
 import Uniliver from "../public/images/dashboard_images/uniliver.png";
 import Tesla from "../public/images/dashboard_images/tesla.png";
 import Mcdonalds from "../public/images/dashboard_images/mcdonalds.png";
 import Monster from "../public/images/dashboard_images/monster.png";
+import axios from 'axios';
 
 const Investments = () => {
+
+    const [investmentsData, setInvestmentsData] = useState([]);
+
+    useEffect (()=>{
+
+    const getInvestmentsData = async () =>{
+        const API_KEY = 'IN0R92YE14FU4WTQ';
+        let API_Call = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=TSLA&apikey=${API_KEY}`
+    
+        const response = await axios.get(`${API_Call}`);
+        console.log(response.data["Global Quote"]["02. open"]);
+        setInvestmentsData(response.data["Global Quote"]);
+      }
+  
+        getInvestmentsData();
+      }, [])
+
   return (
     <div className='bg-[#1F1F21] rounded-[1.6rem] h-fit'>
         <div className='flex justify-between items-center p-[1.6rem] pb-0'>
@@ -35,7 +53,7 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Tesla} alt="tesla"/>
             <h4 className='text-white'>Tesla</h4>
             <div>
-                <p className='text-gray-300'>3 Dic, 2022</p>
+                <p className='text-gray-300'>{investmentsData["07. latest trading day"]}</p>
                 <p className='text-gray-300'>12:01pm</p>
             </div>
             <div>
@@ -43,8 +61,8 @@ const Investments = () => {
                 <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-300'>70,98€</p>
-                <p className='text-green-500'>+2.90%</p>
+                <p className='text-gray-300'>{`${parseFloat(investmentsData["02. open"]).toFixed(2)}€`}</p>
+                <p className='text-red-500'>{`${parseFloat(investmentsData["10. change percent"]).toFixed(2)}%`}</p>
             </div>
         </div>
         {/* Inversion2 */}

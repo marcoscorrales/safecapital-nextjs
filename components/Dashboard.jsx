@@ -10,8 +10,6 @@ import {SideBarContextProvider} from '../context/SideBarContext'
 import axios from 'axios'
 
 const Dashboard = () => {
-  const labels = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-  const data = ['4600', '4546', '4300', '4545', '4155', '4100', '3825', '4118', '3966', '3585', '3855', '4075'];
 
   const [labelsData, setLabelsData] = useState([]);
   const [stockData, setStockData] = useState([]);
