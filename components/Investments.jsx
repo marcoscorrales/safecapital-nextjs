@@ -15,14 +15,22 @@ const Investments = () => {
 
     const getInvestmentsData = async () =>{
         const API_KEY = 'IN0R92YE14FU4WTQ';
-        let API_Call = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=TSLA&apikey=${API_KEY}`
+        let API_Call = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=UL&apikey=${API_KEY}`
+        let API_Call2 = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=TSLA&apikey=${API_KEY}`
+        let API_Call3 = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MCD&apikey=${API_KEY}`
+        let API_Call4 = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MCD&apikey=${API_KEY}`
     
-        const response = await axios.get(`${API_Call}`);
-        console.log(response.data["Global Quote"]["02. open"]);
-        setInvestmentsData(response.data["Global Quote"]);
+        const response = await axios.get(API_Call);
+        const response2 = await axios.get(API_Call2);
+        const response3 = await axios.get(API_Call3);
+        const response4 = await axios.get(API_Call4);
+        
+        setInvestmentsData([response.data["Global Quote"],response2.data["Global Quote"],response3.data["Global Quote"],response4.data["Global Quote"]]);
+        console.log(investmentsData);
       }
   
         getInvestmentsData();
+        console.log(investmentsData);
       }, [])
 
   return (
@@ -36,7 +44,7 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Uniliver} alt="uniliver"/>
             <h4 className='text-white'>Uniliver</h4>
             <div>
-                <p className='text-gray-300'>7 Nov, 2022</p>
+                <p className='text-gray-300'>{investmentsData[0]["07. latest trading day"]}</p>
                 <p className='text-gray-300'>9:14pm</p>
             </div>
             <div>
@@ -44,8 +52,8 @@ const Investments = () => {
                 <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-300'>$20,033</p>
-                <p className='text-red-500'>-4.27%</p>
+                <p className='text-gray-300'>{`${parseFloat(investmentsData[0]["02. open"]).toFixed(2)}€`}</p>
+                <p className='text-red-500'>{`${parseFloat(investmentsData[0]["10. change percent"]).toFixed(2)}%`}</p>
             </div>
         </div>
         {/* Inversion1 */}
@@ -53,7 +61,7 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Tesla} alt="tesla"/>
             <h4 className='text-white'>Tesla</h4>
             <div>
-                <p className='text-gray-300'>{investmentsData["07. latest trading day"]}</p>
+                <p className='text-gray-300'>{investmentsData[1]["07. latest trading day"]}</p>
                 <p className='text-gray-300'>12:01pm</p>
             </div>
             <div>
@@ -61,8 +69,8 @@ const Investments = () => {
                 <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-300'>{`${parseFloat(investmentsData["02. open"]).toFixed(2)}€`}</p>
-                <p className='text-red-500'>{`${parseFloat(investmentsData["10. change percent"]).toFixed(2)}%`}</p>
+                <p className='text-gray-300'>{`${parseFloat(investmentsData[1]["02. open"]).toFixed(2)}€`}</p>
+                <p className='text-red-500'>{`${parseFloat(investmentsData[1]["10. change percent"]).toFixed(2)}%`}</p>
             </div>
         </div>
         {/* Inversion2 */}
@@ -70,7 +78,7 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Monster} alt="monster"/>
             <h4 className='text-white'>Monster</h4>
             <div>
-                <p className='text-gray-300'>9 Dic, 2022</p>
+                <p className='text-gray-300'>{investmentsData[2]["07. latest trading day"]}</p>
                 <p className='text-gray-300'>8:52pm</p>
             </div>
             <div>
@@ -78,8 +86,8 @@ const Investments = () => {
                 <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-300'>78,19€</p>
-                <p className='text-green-500'>+3.41%</p>
+                <p className='text-gray-300'>{`${parseFloat(investmentsData[2]["02. open"]).toFixed(2)}€`}</p>
+                <p className='text-green-500'>{`${parseFloat(investmentsData[2]["10. change percent"]).toFixed(2)}%`}</p>
             </div>
         </div>
         {/* Inversion3 */}
@@ -87,7 +95,7 @@ const Investments = () => {
             <Image className='w-[2.4rem]' src={Mcdonalds} alt="mcdonalds"/>
             <h4 className='text-white'>Mcdonalds</h4>
             <div>
-                <p className='text-gray-300'>27 Dic, 2022</p>
+                <p className='text-gray-300'>{investmentsData[3]["07. latest trading day"]}</p>
                 <p className='text-gray-300'>11:11pm</p>
             </div>
             <div>
@@ -95,8 +103,8 @@ const Investments = () => {
                 <p className='text-gray-300'>Bonos</p>
             </div>
             <div>
-                <p className='text-gray-300'>150,55€</p>
-                <p className='text-red-500'>-1.23%</p>
+                <p className='text-gray-300'>{`${parseFloat(investmentsData[3]["02. open"]).toFixed(2)}€`}</p>
+                <p className='text-red-500'>{`${parseFloat(investmentsData[3]["10. change percent"]).toFixed(2)}%`}</p>
             </div>
         </div>
         {/* Inversion4 */}
