@@ -8,6 +8,7 @@ import { getError } from '../data/error';
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
 import { useRouter } from "next/router";
+import axios from "axios";
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -25,10 +26,16 @@ export default function LoginScreen() {
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
   } = useForm();
-  const submitHandler = async ({ email, password }) => {
+  const submitHandler = async ({name, email, password }) => {
     try {
+        await axios.post('/api/auth/signup', {
+            name,
+            email,
+            password
+        });
       const result = await signIn('credentials', {
         redirect: false,
         email,
@@ -55,8 +62,26 @@ export default function LoginScreen() {
           onSubmit={handleSubmit(submitHandler)}
         >
           <h1 className="font-poppins font-normal text-gray-300 text-[30px]">
-            Login
+            Crear cuenta
           </h1>
+          <div className="mb-4 mt-8">
+            <label
+              className="font-poppins font-normal text-gray-300 text-[18px]"
+              htmlFor="name"
+            >
+              Nombre
+            </label>
+            <input
+              type="text"
+              {...register("name", { required: "Por favor inserta un nombre"})}
+              className="w-full rounded-sm border-2 p-2 outline-none font-poppins font-normal text-black text-[18px]"
+              id="name"
+              autoFocus
+            ></input>
+            {errors.name && (
+              <div className="text-red-500">{errors.name.message}</div>
+            )}
+          </div>
           <div className="mb-4 mt-8">
             <label
               className="font-poppins font-normal text-gray-300 text-[18px]"
@@ -72,7 +97,6 @@ export default function LoginScreen() {
               }})}
               className="w-full rounded-sm border-2 p-2 outline-none font-poppins font-normal text-black text-[18px]"
               id="email"
-              autoFocus
             ></input>
             {errors.email && (
               <div className="text-red-500">{errors.email.message}</div>
@@ -100,11 +124,32 @@ export default function LoginScreen() {
             )}
           </div>
           <div className="mb-4">
-            <button type="submit" className="py-4 px-6 bg-gradient-to-r from-[#00FDA8] to-[#01A78A] font-poppins font-medium text-[18px] text-white outline-none rounded-[10px]">Iniciar sesión</button>
+            <label
+              className="font-poppins font-normal text-gray-300 text-[18px]"
+              htmlFor="confirmPassword"
+            >
+              Confirmar Contraseña
+            </label>
+            <input
+              type="password"
+              {...register("confirmPassword", { required: "Por favor inserta una contraseña",validate: (value) => value === getValues('password') , minLength: {
+                value: 6,
+                message: 'La contraseña debe tener más de 5 caracteres.',
+              }})}
+              className="w-full rounded-sm border-2 p-2 outline-none font-poppins font-normal text-black text-[18px]"
+              id="confirmPassword"
+              autoFocus
+            ></input>
+              {errors.password && errors.confirmPassword.type === 'validate' && (
+              <div className="text-red-500">La contraseña no coincide</div>
+            )}
+          </div>
+          <div className="mb-4">
+            <button type="submit" className="py-4 px-6 bg-gradient-to-r from-[#00FDA8] to-[#01A78A] font-poppins font-medium text-[18px] text-white outline-none rounded-[10px]">Crear cuenta</button>
           </div>
           <div className="mb-4 font-poppins font-normal text-gray-300 text-[18px]">
-            No tienes cuenta? &nbsp;
-            <Link href={`/register?redirect=${redirect || '/'}`}>Registro</Link>
+            Ya tienes cuenta? &nbsp;
+            <Link href="login">Iniciar sesión</Link>
           </div>
         </form>
       </main>
