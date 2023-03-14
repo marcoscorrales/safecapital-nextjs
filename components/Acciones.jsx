@@ -15,7 +15,7 @@ const Acciones = () => {
             <Boton styles="mt-10" text={"Saber más"}/>
         </div>
         <div className='flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative'>
-            <img src='/images/stocks_logos.png' className='w-[100%] h-[100%]'/>
+            <img src='/images/stocks_logos.png' className='w-[100%] h-[100%]' alt="/"/>
         </div>
     </section>
   )

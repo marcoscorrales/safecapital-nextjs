@@ -18,7 +18,7 @@ const Blogs = () => {
         </h1>
         <div className="flex flex-col gap-[3rem]">
           <div className="flex flex-col lg:flex-row items-center">
-            <Image src={img1} className="w-full max-w-[600px] p-4" />
+            <Image src={img1} className="w-full max-w-[600px] p-4" alt="/" />
             <div>
               <h3 className="text-[#01A78A] text-center text-3xl m-10">
                 Los mercados siguen creciendo
@@ -46,7 +46,7 @@ const Blogs = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row items-center">
-            <Image src={img2} className="w-full max-w-[600px] p-4" />
+            <Image src={img2} className="w-full max-w-[600px] p-4" alt="/" />
             <div>
               <h3 className="text-[#01A78A] text-center text-3xl m-10">
                 La inteligencia artificial en nuestras finanzas
@@ -75,7 +75,7 @@ const Blogs = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row items-center">
-            <Image src={img3} className="w-full max-w-[600px] p-4" />
+            <Image src={img3} className="w-full max-w-[600px] p-4" alt="/" />
             <div>
               <h3 className="text-[#01A78A] text-center text-3xl m-10">
                 La historia detrás del crecimiento constante del SP500 en Wall
@@ -83,7 +83,7 @@ const Blogs = () => {
               </h3>
 
               <p className="font-poppins font-normal text-gray-300 text-justify text-[16px] ss:text-[18px] leading-[30.8px] px-2">
-                El índice Standard & Poor's 500 (SP500) es uno de los índices 
+                El índice Standard & Poor&apos;s 500 (SP500) es uno de los índices 
                 bursátiles más importantes y ampliamente seguidos en el mundo.
                 Este índice mide el rendimiento de las 500 mayores empresas
                 cotizadas en bolsa en Estados Unidos, y se utiliza comúnmente
