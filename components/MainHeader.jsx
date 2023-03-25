@@ -66,13 +66,13 @@ const MainHeader = () => {
                   <Link href="/">Inicio</Link>
                 </li>
                 <li className="text-white mb-4">
-                  <Link href="/">Anuncios</Link>
+                <Link href="/blog">Blog</Link>
                 </li>
                 <li className="text-white mb-4">
                   <Link href="/productos">Productos</Link>
                 </li>
                 <li className="text-white mb-4">
-                  <Link href="/dashboard">Dashboard</Link>
+                  <Link href="/login?redirect=/dashboard">Dashboard</Link>
                 </li>
                 <li className="text-white mb-4">
               {status === 'loading' ? (
